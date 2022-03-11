@@ -7,3 +7,16 @@
           text-decoration: 0;
   font-family: "Montserrat", sans-serif;
 }/*# sourceMappingURL=app.css.map */
+
+button {
+  background-color: orange;
+  text-align: center;
+}
+
+div {
+  text-align: center;
+ margin-top: 10%;
+ align-items: center;
+ /* margin-left: 8%; */
+}
+
