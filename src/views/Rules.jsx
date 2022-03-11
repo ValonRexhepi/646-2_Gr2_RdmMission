@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Page, Document , pdfjs } from "react-pdf";
 import Mission_GDR_2022_Regles from "../docs/Mission_GDR_2022_Regles.pdf";
 import "../styles/app.css"
