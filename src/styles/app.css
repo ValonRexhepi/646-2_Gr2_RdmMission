@@ -8,15 +8,16 @@
   font-family: "Montserrat", sans-serif;
 }/*# sourceMappingURL=app.css.map */
 
-button {
-  background-color: orange;
+/* button {
+  background-color: #d98934;
   text-align: center;
-}
+  font-size: 100%;
+  margin:8px;
+  color: antiquewhite;
+} */
 
 div {
   text-align: center;
- margin-top: 10%;
- align-items: center;
- /* margin-left: 8%; */
+  margin-top: 5%;
 }
 
