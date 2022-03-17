@@ -1,4 +1,6 @@
 import React from 'react';
+import styles from '../styles/app.module.css';
+import '../styles/app.css'
 import { Link, useNavigate } from 'react-router-dom';
 import uuid from 'react-uuid'
 import { db } from "../services/firebase"
@@ -19,12 +21,13 @@ export default function Onboarding() {
     }
 
     return(
-        <div>
+        <div style={{marginTop:"5%", textAlign:'center'}}>
             <h1>MISSION GDR: DERNIERE QUETE AVONT LES FETES</h1>
-            <h2>*names to be filled in*</h2>
-            <Link to = "/rules">Comment jouer? (Rules)</Link>
+            <h3>*names to be filled in*</h3>
             <br/>
-            <button onClick={createGameSession}>
+            <Link to = "/rules" className={styles.button}>Comment jouer? (Rules)</Link>
+            <br/>
+            <button className={styles.button} onClick={createGameSession}>
                 Commencer une partie (Start Game)
             </button>
         </div>
