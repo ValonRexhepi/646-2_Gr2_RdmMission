@@ -3,7 +3,7 @@
     text-align: center;
     font-size: 100%;
     padding:5px;
-    margin: 20px;
+    margin: 10px;
     color: #ffe0cc;
     font-family: Arial;
     align-self: center;
@@ -13,6 +13,5 @@
 
 .pdfdiv {
     margin-left: 25%;
-    margin-top: 2%;
 }
 
