@@ -141,7 +141,7 @@ export default function Roadmap() {
                 <label>6.2 Préparer la citation du dataset</label>
 
             </form>
-            <button onClick={backToGame}>Back to game</button>
+            <button className = "button" onClick={backToGame}>Back to game</button>
         </div>
     )
 }
