@@ -18,6 +18,10 @@ export default function Game() {
         <div>
             <h2>Game</h2>
             <p>Session Id: {session.id}</p>
+            <Link to={{
+                pathname:"/roadmap",
+                state: session.id
+            }}>Roadmap</Link>
             <Link to="/">
                 <button className={styles.button} onClick={endGame}>End Game</button>
             </Link>
