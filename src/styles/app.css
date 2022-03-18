@@ -6,18 +6,31 @@
   -webkit-text-decoration: 0;
           text-decoration: 0;
   font-family: "Montserrat", sans-serif;
-}/*# sourceMappingURL=app.css.map */
-
-/* button {
-  background-color: #d98934;
-  text-align: center;
-  font-size: 100%;
-  margin:8px;
-  color: antiquewhite;
-} */
+}
 
 div {
   text-align: center;
   margin-top: 5%;
 }
 
+.button {
+  background-color: #ff944d;
+  text-align: center;
+  font-size: 100%;
+  padding: 5px;
+  margin: 10px;
+  color: #ffe0cc;
+  font-family: Arial;
+  align-self: center;
+  border-radius: 11px;
+  border: 1px black solid;
+}
+
+.pdfdiv {
+  margin-left: 25%;
+}
+
+#app-logo img {
+  width: 9rem;
+  margin: 1rem 0 3rem 0;
+}
