@@ -17,7 +17,8 @@ export default function Game() {
         <div>
             <h2>Game</h2>
             <p>Session Id: {session.id}</p>
-            <Link to={{
+            <Link className = "button" 
+                to={{
                 pathname:"/roadmap",
                 state: session.id
             }}>Roadmap</Link>
