@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 import {useNavigate} from "react-router-dom";
 import {useSession} from "../contexts/SessionContext";
 
@@ -8,7 +8,7 @@ export default function Roadmap() {
     const navigate = useNavigate()
     const {session} = useSession()
 
-    const [state, setState] = useState({
+    const [state, setState] = useState(JSON.parse(localStorage.getItem('test')) || {
             onePointOne: "",
             b: "",
             c: "",
@@ -42,10 +42,10 @@ export default function Roadmap() {
         });
     }
 
-    /*useEffect(() =>{
-        localStorage.setItem('test', state);
+    useEffect(() =>{
+        localStorage.setItem('test', JSON.stringify(state));
     }, [state]);
-*/
+
     const backToGame = () => {
         navigate(`/game/${session.id}`)
     }

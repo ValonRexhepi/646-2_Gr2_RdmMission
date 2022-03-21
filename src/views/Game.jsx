@@ -10,6 +10,7 @@ export default function Game() {
 
     const endGame = () => {
         remove(ref(db, `/${session.id}`))
+        localStorage.clear()
         setSession(null)
     }
 
