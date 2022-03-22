@@ -102,7 +102,7 @@ export default function Roadmap() {
                     <input type="text" name="threePointOne" value={state.threePointOne} onChange={handleChange}/>
                 </label><br/>
                 <label>3.2
-                    <input type="text" name="ThreePointTwo" value={state.threePointTwo} onChange={handleChange}/>
+                    <input type="text" name="threePointTwo" value={state.threePointTwo} onChange={handleChange}/>
                 </label><br/>
                 <label>3.3
                     <input type="text" name="threePointThree" value={state.threePointThree} onChange={handleChange}/>
