@@ -7,7 +7,7 @@ export default function Rules() {
     pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
     return(
-        <div>
+        <div className="container">
             <Link to ="/" className="button">Go Home</Link>
             <div className="pdfdiv">
                 <Document file={Mission_GDR_2022_Regles}>

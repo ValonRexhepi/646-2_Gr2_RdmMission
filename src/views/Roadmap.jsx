@@ -47,7 +47,7 @@ export default function Roadmap() {
     }, [state]);
 
     const backToGame = () => {
-        navigate(`/game/${session.id}`)
+        navigate(`/${session.id}`)
     }
 
 
