@@ -32,9 +32,9 @@ export default function Game() {
                 to={{
                 pathname:"/roadmap",
                 state: session?.id
-            }}>Roadmap</Link>
+            }}>Feuille de route (Roadmap)</Link>
             <Link to="/">
-                <button className="button" onClick={endGame}>End Game</button>
+                <button className="button" onClick={endGame}>Fin du jeu (End Game)</button>
             </Link>
 
             <GameScreen />

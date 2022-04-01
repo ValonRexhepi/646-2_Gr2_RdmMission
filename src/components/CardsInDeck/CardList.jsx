@@ -19,7 +19,7 @@ export default function CardList({ numberToBeFound }) {
             } else {
                 setCardFound(null)
                 numberToBeFound
-                ? setNotFoundTxt("Ce numéro est incorrect ou ce correspond pas à cette étape, entrez un autre numéro")
+                ? setNotFoundTxt("Ce numéro est incorrect ou ne correspond pas à cette étape, entrez un autre numéro !")
                 : setNotFoundTxt("")
             }
         }
@@ -28,7 +28,7 @@ export default function CardList({ numberToBeFound }) {
 
     return (
         <div>
-            <h4>Cards in Deck</h4>
+            <h4>Cartes dans la pioche (Cards in Deck)</h4>
             <p>{cardFound && cardFound.number}</p>
             <p>{notFoundTxt}</p>
         </div>

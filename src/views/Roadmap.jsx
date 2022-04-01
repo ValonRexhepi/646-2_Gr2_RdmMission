@@ -53,9 +53,9 @@ export default function Roadmap() {
 
     return (
         <div>
-            <h1>Roadmap</h1>
+            <h1>Feuille de route (Roadmap)</h1>
             <form>
-                <h3>Etape 1. Elaboration et planification de projet</h3>
+                <h3>Etape 1. Elaboration et planification du projet</h3>
                 <label>1.1
                     <input type="text" name="onePointOne" value={state.onePointOne} onChange={handleChange}/>
                 </label><br/>
@@ -66,7 +66,7 @@ export default function Roadmap() {
                 <label>C.
                     <input type="text" name="c" value={state.c} onChange={handleChange}/>
                 </label><br/>
-                <label>D. Ethique et conformité légale</label><br/>
+                <label>D. Éthique et conformité légale</label><br/>
                 <label>E.
                     <input type="text" name="e" value={state.e} onChange={handleChange}/>
                 </label><br/>
@@ -83,7 +83,7 @@ export default function Roadmap() {
                 <label>1.3
                     <input type="text" name="onePointThree" value={state.onePointThree} onChange={handleChange}/>
                 </label><br/>
-                <label>1.4 Réfléchir aux spects juridiques et éthiques</label><br/>
+                <label>1.4 Réfléchir aux aspects juridiques et éthiques</label><br/>
                 <label>1.5 Analyser les coûts liés au stockage</label><br/>
 
                 <h3>Etape 2. Collecte/création des données</h3>
@@ -97,7 +97,7 @@ export default function Roadmap() {
                     <input type="text" name="twoPointThree" value={state.twoPointThree} onChange={handleChange}/>
                 </label><br/>
 
-                <h3>Etape 3. Traitement et analyser des données</h3>
+                <h3>Etape 3. Traitement et analyse des données</h3>
                 <label>3.1
                     <input type="text" name="threePointOne" value={state.threePointOne} onChange={handleChange}/>
                 </label><br/>
@@ -141,7 +141,7 @@ export default function Roadmap() {
                 <label>6.2 Préparer la citation du dataset</label>
 
             </form>
-            <button className = "button" onClick={backToGame}>Back to game</button>
+            <button className = "button" onClick={backToGame}>Retour au jeu (Back to game)</button>
         </div>
     )
 }

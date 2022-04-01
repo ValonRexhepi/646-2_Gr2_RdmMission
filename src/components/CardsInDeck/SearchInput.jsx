@@ -7,7 +7,7 @@ export default function SearchInput({ setNumberToBeFound }) {
             <FiSearch />
             <input
                 className="search-input"
-                placeholder="Card number..."
+                placeholder="Numéro de la carte... (Card number...)"
                 onChange={(e) => setNumberToBeFound(e.target.value)}
             />
         </div>
