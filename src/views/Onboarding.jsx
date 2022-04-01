@@ -34,13 +34,14 @@ export default function Onboarding() {
         <div id="onboarding">
             <div>
                 <AppLogo />
-                <h1>MISSION GDR: DERNIERE QUETE AVONT LES FETES</h1>
-                <h3>*names to be filled in*</h3>
+                <h1>MISSION GDR: DERNIÈRE QUÊTE AVANT LES FÊTES</h1>
+                <h3>Prototype du jeu : Jouhar Myriam, Melly Pauline, Trombert Alexia (Haute école de gestion Genève)</h3>
+                <h3>Site web et développement : Ferrari Bastien, Le Phung, Rexhepi Valon, Sharma Sanya (HES-SO Valais-Wallis, HAAGA HELIA University of applied Sciences)</h3>
                 <br/>
             </div>
             
             <div>
-                <Link to = "/rules" className="button">Comment jouer? (Rules)</Link>
+                <Link to = "/rules" className="button">Comment jouer ? (Rules)</Link>
                 <br/>
                 <button className="button" onClick={createGameSession}>
                     Commencer une partie (Start Game)
