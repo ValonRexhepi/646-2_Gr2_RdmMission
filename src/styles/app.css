@@ -94,3 +94,25 @@ h4 {
   display: grid;
   grid: 1fr / 0.3fr 1fr 0.3fr;
 }
+
+.cards {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.card {
+  position: absolute;
+  background: coral;
+  padding: 2.6rem 0.5rem 0.3rem 0.5rem;
+  cursor: move;
+}
+
+.card.moving {
+  z-index: 2;
+}
+
+.card img {
+  cursor: default;
+}
