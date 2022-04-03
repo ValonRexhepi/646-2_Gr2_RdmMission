@@ -97,7 +97,6 @@ h4 {
 
 .cards {
   position: relative;
-  border: 1px solid black;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -106,48 +105,14 @@ h4 {
 .card {
   position: absolute;
   background: coral;
-  padding: 1rem;
-}
-
-/* .card .move {
+  padding: 2.6rem 0.5rem 0.3rem 0.5rem;
   cursor: move;
-} */
-
-/* .card-container {
-  position: absolute;
-  border: 1px solid coral;
-  padding: 1rem;
-} */
-
-/* .card:nth-child(n+2) {
-  background: green;
-  top: calc(0rem + 2rem);
-} */
-/* 
-.card-1 {
-  top: 2rem;
 }
 
-.card-2 {
-  top: 4rem;
+.card.moving {
+  z-index: 2;
 }
 
-.card-3 {
-  top: 6rem;
+.card img {
+  cursor: default;
 }
-
-.card-4 {
-  top: 8rem;
-}
-
-.card-5 {
-  top: 10rem;
-}
-
-.card-6 {
-  top: 12rem;
-}
-
-.card-7 {
-  top: 4rem;
-} */
