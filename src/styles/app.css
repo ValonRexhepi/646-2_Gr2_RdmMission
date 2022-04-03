@@ -94,3 +94,60 @@ h4 {
   display: grid;
   grid: 1fr / 0.3fr 1fr 0.3fr;
 }
+
+.cards {
+  position: relative;
+  border: 1px solid black;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.card {
+  position: absolute;
+  background: coral;
+  padding: 1rem;
+}
+
+/* .card .move {
+  cursor: move;
+} */
+
+/* .card-container {
+  position: absolute;
+  border: 1px solid coral;
+  padding: 1rem;
+} */
+
+/* .card:nth-child(n+2) {
+  background: green;
+  top: calc(0rem + 2rem);
+} */
+/* 
+.card-1 {
+  top: 2rem;
+}
+
+.card-2 {
+  top: 4rem;
+}
+
+.card-3 {
+  top: 6rem;
+}
+
+.card-4 {
+  top: 8rem;
+}
+
+.card-5 {
+  top: 10rem;
+}
+
+.card-6 {
+  top: 12rem;
+}
+
+.card-7 {
+  top: 4rem;
+} */

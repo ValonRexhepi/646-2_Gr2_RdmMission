@@ -1,11 +1,20 @@
-import React from "react"
+import React, { useState } from "react"
 
 import CardsInDeck from "../CardsInDeck"
+import CardContainer from "../CardContainer"
 
 export default function GameScreen() {
+    const [ numberToBeFound, setNumberToBeFound ] = useState("")
+
     return (
         <div id="game-screen">
-            <CardsInDeck />
+            <CardsInDeck
+                numberToBeFound={numberToBeFound}
+                setNumberToBeFound={setNumberToBeFound}
+            />
+            <div className="cards">
+                <CardContainer numberToBeFound={numberToBeFound} />
+            </div>
         </div>
     )
 }

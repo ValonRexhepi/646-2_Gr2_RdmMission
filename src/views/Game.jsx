@@ -13,7 +13,7 @@ export default function Game() {
 
     useEffect(() => {
         const sessionId = getDataLS("sessionId")
-        if (sessionId && sessionId === pathname.split("/")[2]) {
+        if (sessionId && sessionId === pathname.split("/")[1]) {
             setSession({ id: sessionId })
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
