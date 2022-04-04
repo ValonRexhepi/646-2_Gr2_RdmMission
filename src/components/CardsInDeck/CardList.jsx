@@ -15,12 +15,13 @@ export default function CardList({ numberToBeFound }) {
                     setCardFound(null)
                 } else {
                     setCardFound(found)
+                    setNotFoundTxt("")
                 }   
             } else {
                 setCardFound(null)
                 numberToBeFound
-                ? setNotFoundTxt("")
-                : setNotFoundTxt("Ce numéro est incorrect ou ne correspond pas à cette étape, entrez un autre numéro !")
+                ? setNotFoundTxt("Ce numéro est incorrect ou ne correspond pas à cette étape, entrez un autre numéro !")
+                : setNotFoundTxt("")
             }
         }
         
