@@ -8,7 +8,7 @@ export default function SearchInput({ setNumberToBeFound }) {
             <input
                 className="search-input"
                 placeholder="Numéro de la carte... (Card number...)"
-                onChange={(e) => setNumberToBeFound(e.target.value)}
+                onChange={(e) => setNumberToBeFound((e.target.value).replace(/\s/g, "").toUpperCase())}
             />
         </div>
     )
