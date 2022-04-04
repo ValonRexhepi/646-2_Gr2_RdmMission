@@ -15,6 +15,7 @@ export default function CardList({ numberToBeFound }) {
                     setCardFound(null)
                 } else {
                     setCardFound(found)
+                    setNotFoundTxt("")
                 }   
             } else {
                 setCardFound(null)

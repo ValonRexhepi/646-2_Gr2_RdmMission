@@ -15,6 +15,10 @@
   --light-orange: #FFE0CC;
 }
 
+body {
+  overflow: hidden;
+}
+
 div {
   text-align: center;
   /* margin-top: 5%; */
