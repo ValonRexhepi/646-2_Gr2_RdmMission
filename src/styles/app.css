@@ -15,7 +15,7 @@
   --light-orange: #FFE0CC;
 }
 
-body {
+.game {
   overflow: hidden;
 }
 
@@ -47,8 +47,17 @@ h4 {
   cursor: pointer;
 }
 
+#rule-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .pdfdiv {
-  margin-left: 25%;
+  /* margin-left: 25%; */
+  overflow-y: scroll;
 }
 
 #app-logo img {
@@ -93,8 +102,9 @@ h4 {
 }
 
 #game-screen {
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   min-height: 70vh;
+  height: 79vh;
   display: grid;
   grid: 1fr / 0.3fr 1fr 0.3fr;
 }
@@ -108,7 +118,7 @@ h4 {
 
 .card {
   position: absolute;
-  background: coral;
+  background: var(--orange);
   padding: 2.6rem 0.5rem 0.3rem 0.5rem;
   cursor: move;
 }

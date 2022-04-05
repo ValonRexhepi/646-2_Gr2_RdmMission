@@ -7,14 +7,14 @@ export default function Rules() {
     pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
     return(
-        <div className="container">
+        <div className="container" id="rule-screen">
             <Link to ="/" className="button">Accueil (Go Home)</Link>
             <div className="pdfdiv">
                 <Document file={Mission_GDR_2022_Regles}>
-                    <Page pageNumber={1} />
-                    <Page pageNumber={2} />
+                    <Page pageNumber={1} className="rule-page" />
+                    <Page pageNumber={2} className="rule-page" />
                 </Document>
-            </div>
+            </div>  
         </div>
     )
 }

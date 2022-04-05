@@ -26,7 +26,7 @@ export default function Game() {
     }
 
     return (
-        <div className="container">
+        <div className="container game">
             <p>Session Id: {session?.id}</p>
             <Link className = "button" 
                 to={{
