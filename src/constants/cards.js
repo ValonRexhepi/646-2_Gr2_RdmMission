@@ -1,353 +1,283 @@
 const cards = [
     {
         number: 1,
-        isDiscarded: false,
-        image: ""    
+        isDiscarded: false    
     },
     {
         number: 3,
-        isDiscarded: false,
-        image: ""   
+        isDiscarded: false   
     },
     {
         number: 4,
-        isDiscarded: false,
-        image: ""    
+        isDiscarded: false    
     },
     {
         number: 6,
-        isDiscarded: false,
-        image: ""    
+        isDiscarded: false    
     },
     {
         number: 7,
-        isDiscarded: false,
-        image: ""    
+        isDiscarded: false    
     },
     {
         number: 8,
-        isDiscarded: false,
-        image: ""    
+        isDiscarded: false    
     },
     {
         number: 9,
-        isDiscarded: false,
-        image: ""    
+        isDiscarded: false    
     },
     {
         number: 11,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 12,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 13,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 15,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 16,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 17,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 18,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 19,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 21,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 22,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 25,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 26,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 28,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 29,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 30,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 31,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 32,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 35,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 36,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 37,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 44,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 47,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 51,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 56,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 59,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 60,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 61,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 64,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 65,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 68,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 69,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 71,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 75,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 77,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 79,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 81,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 82,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 84,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 85,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 88,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 92,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 93,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 94,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 95,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 96,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: 99,
-        isDiscarded: false,
-        image: ""
+        isDiscarded: false
     },
     {
         number: "i22",
         isDiscarded: false,
-        image: "",
     },
     {
         number: "i3",
-        isDiscarded: false,
-        image: "",   
+        isDiscarded: false,   
     },
     {
         number: "i51",
         isDiscarded: false,
-        image: "",
     },
     {
         number: "i67",
         isDiscarded: false,
-        image: "",
     },
     {
         number: "i68",
         isDiscarded: false,
-        image: "",
     },
     {
         number: "j1",
-        isDiscarded: false,
-        image: "",    
+        isDiscarded: false,    
     },
     {
         number: "j9",
-        isDiscarded: false,
-        image: "",    
+        isDiscarded: false,    
     },
     {
         number: "s1",
-        isDiscarded: false,
-        image: "",    
+        isDiscarded: false,    
     },
     {
         number: "s2",
-        isDiscarded: false,
-        image: "",    
+        isDiscarded: false,    
     },
     {
         number: "s4",
-        isDiscarded: false,
-        image: "",    
+        isDiscarded: false,    
     },
     {
         number: "s5",
-        isDiscarded: false,
-        image: "",    
+        isDiscarded: false,    
     },
     {
         number: "s8",
-        isDiscarded: false,
-        image: "",    
+        isDiscarded: false,    
     },
     {
         number: "s10",
-        isDiscarded: false,
-        image: "",    
+        isDiscarded: false,    
     },
     {
         number: "s13",
-        isDiscarded: false,
-        image: "",    
+        isDiscarded: false,    
     },
     {
         number: "s15",
-        isDiscarded: false,
-        image: "",    
+        isDiscarded: false,    
     },
     {
         number: "s25",
-        isDiscarded: false,
-        image: "",    
+        isDiscarded: false,    
     },
     {
         number: "s28",
-        isDiscarded: false,
-        image: "",    
+        isDiscarded: false,    
     }
 ]
 
