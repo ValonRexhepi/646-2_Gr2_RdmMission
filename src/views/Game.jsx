@@ -6,6 +6,7 @@ import { getDataLS } from "../utils/helpers";
 
 import { useSession } from "../contexts/SessionContext"
 import GameScreen from "../components/GameScreen"
+import Clock from "../components/Clock";
 
 export default function Game() {
     const { pathname } = useLocation()
@@ -27,6 +28,8 @@ export default function Game() {
 
     return (
         <div className="container game">
+            <Clock />
+
             <p>Session Id: {session?.id}</p>
             <Link className = "button" 
                 to={{
