@@ -20,6 +20,7 @@ export default function CheckpointForward({ initialTime, setIsForward }) {
         if (storeTime) {
             storeDataLS("forward-time", timeEl.innerHTML)
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [count])
 
     useEffect(() => {
