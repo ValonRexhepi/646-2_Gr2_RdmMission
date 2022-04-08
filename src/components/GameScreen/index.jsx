@@ -4,7 +4,7 @@ import CardsInDeck from "../CardsInDeck"
 import CardContainer from "../CardContainer"
 
 export default function GameScreen() {
-    const [ numberToBeFound, setNumberToBeFound ] = useState("")
+    const [ numberToBeFound, setNumberToBeFound ] = useState("synopsis")
 
     return (
         <div id="game-screen">
