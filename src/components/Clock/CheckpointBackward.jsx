@@ -20,6 +20,7 @@ export default function CheckpointBackward({ initialTime, setIsForward }) {
         if (storeTime) {
             storeDataLS("backward-time", timeEl.innerHTML)
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [count])
 
     useEffect(() => {
