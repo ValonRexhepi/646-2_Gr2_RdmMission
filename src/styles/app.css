@@ -78,6 +78,14 @@ h4 {
   padding: 1rem 0 4rem 0;  
 }
 
+#roadmap {
+  position: fixed;
+  inset: 0;
+  background: white;
+  z-index: 3;
+  overflow-y: auto;
+}
+
 .search-input-container {
   position: relative;
   margin: 0 0 1rem 0;
@@ -139,4 +147,11 @@ h4 {
 
 .timer.forward {
   color: red;
+}
+
+#forward-time,
+#checkpoint-forward-time,
+#backward-time,
+#checkpoint-backward-time {
+  display: none;
 }

@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from "react"
-import {useNavigate} from "react-router-dom";
-import {useSession} from "../contexts/SessionContext";
+// import {useNavigate} from "react-router-dom";
+// import {useSession} from "../contexts/SessionContext";
 
 
-export default function Roadmap() {
+export default function Roadmap({ setIsOpenRoadmap }) {
 
-    const navigate = useNavigate()
-    const {session} = useSession()
+    // const navigate = useNavigate()
+    // const {session} = useSession()
 
     const [state, setState] = useState(JSON.parse(localStorage.getItem('test')) || {
             onePointOne: "",
@@ -46,13 +46,15 @@ export default function Roadmap() {
         localStorage.setItem('test', JSON.stringify(state));
     }, [state]);
 
-    const backToGame = () => {
-        navigate(`/${session.id}`)
+    const backToGame = (e) => {
+        e.preventDefault()
+        // navigate(`/${session.id}`)
+        setIsOpenRoadmap(false)
     }
 
 
     return (
-        <div>
+        <div id="roadmap">
             <h1>Feuille de route (Roadmap)</h1>
             <form>
                 <h3>Etape 1. Elaboration et planification du projet</h3>

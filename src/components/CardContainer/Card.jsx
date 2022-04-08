@@ -24,7 +24,7 @@ export default function Card({ source }) {
             <div 
                 ref={cardRef}
                 className="card"
-                style={cardPosition.current}
+                style={!source.includes("synopsis") && cardPosition.current}
             >
                 <img 
                     src={source} 

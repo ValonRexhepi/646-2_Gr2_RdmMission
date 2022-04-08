@@ -7,7 +7,7 @@ import CardProvider from "./contexts/CardContext"
 import Onboarding from "./views/Onboarding"
 import Rules from "./views/Rules"
 import Game from "./views/Game"
-import Roadmap from "./views/Roadmap";
+// import Roadmap from "./views/Roadmap";
 
 function App() {
     return (
@@ -19,7 +19,7 @@ function App() {
                         <Route path="/" element={<Onboarding />} />
                         <Route path="/rules" element={<Rules />}/>
                         <Route path="/:sessionId" element={<Game />}/>
-                        <Route path="/roadmap" element={<Roadmap />}/>
+                        {/* <Route path="/roadmap" element={<Roadmap />}/> */}
                     </Routes>
                 </BrowserRouter>
             </CardProvider>
