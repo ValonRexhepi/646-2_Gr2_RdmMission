@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import Timer from "react-compound-timerv2"
 import { storeDataLS } from "../../utils/helpers"
 
-export default function Backward({ setIsForward }) {
+export default function CheckpointForward({ initialTime, setIsForward }) {
     const [ count, setCount ] = useState(0)
     const [ storeTime, setStoreTime ] = useState(false)
 
@@ -16,22 +16,21 @@ export default function Backward({ setIsForward }) {
 
     useEffect(() => {
         setStoreTime(true)
-        const timeEl = document.getElementById("backward-time")
+        const timeEl = document.getElementById("checkpoint-forward-time")
         if (storeTime) {
-            storeDataLS("backward-time", timeEl.innerHTML)
+            storeDataLS("forward-time", timeEl.innerHTML)
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [count])
 
     useEffect(() => {
         setStoreTime(false)
-    }, [])
+    }, [initialTime])
 
     return (
-        <div className="timer">
+        <div className="timer forward">
             <Timer
-                initialTime={1000 * 60 * 60} 
-                direction="backward"
+                initialTime={Number(initialTime)} 
+                direction="forward"
                 checkpoints={[
                     {
                         time: 0,
@@ -42,7 +41,8 @@ export default function Backward({ setIsForward }) {
             >
                 {({ getTime }) => (
                     <>
-                        <p id="backward-time">{getTime()}</p>
+                        <p id="checkpoint-forward-time">{getTime()}</p>
+                        <span> + </span>
                         <Timer.Minutes formatValue={value => value === 0 ? "00" : value < 10 ? `0${value}` : value} />
                         <span> : </span>
                         <Timer.Seconds formatValue={value => value === 0 ? "00" : value < 10 ? `0${value}` : value} />
