@@ -8,11 +8,16 @@ import { useSession } from "../contexts/SessionContext"
 import GameScreen from "../components/GameScreen"
 import Roadmap from "./Roadmap"
 import Clock from "../components/Clock"
+import Popup from "../components/Popup"
+import HintSolution from "../components/HintSolution"
+import { useImgSrc } from "../contexts/ImgSrcContext";
 
 export default function Game() {
     const { pathname } = useLocation()
+    const { setImgSrc } = useImgSrc()
     const { session, setSession } = useSession()
     const [ isOpenRoadmap, setIsOpenRoadmap ] = useState(false)
+    const [ isForward, setIsForward ] = useState(false)
 
     useEffect(() => {
         const sessionId = getDataLS("sessionId")
@@ -26,6 +31,7 @@ export default function Game() {
         remove(ref(db, `/${session.id}`))
         localStorage.clear()
         setSession(null)
+        setImgSrc([])
     }
 
     const showRoadmap = (e) => {
@@ -35,7 +41,10 @@ export default function Game() {
 
     return (
         <div className="container game">
-            <Clock />
+            <Clock 
+                isForward={isForward}
+                setIsForward={setIsForward}
+            />
 
             <p>Session Id: {session?.id}</p>
             {/* <Link className = "button" 
@@ -54,7 +63,12 @@ export default function Game() {
             </Link>
 
             { isOpenRoadmap && <Roadmap setIsOpenRoadmap={setIsOpenRoadmap} /> }
+            
             <GameScreen />
+
+            <Popup isForward={isForward} />
+
+            <HintSolution />
         </div>
     )
 }
