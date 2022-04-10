@@ -2,10 +2,10 @@ import React, { useState } from "react"
 
 import CardsInDeck from "../CardsInDeck"
 import CardContainer from "../CardContainer"
-
+import CardsDiscarded from "../CardsDiscarded"
 export default function GameScreen() {
     const [ numberToBeFound, setNumberToBeFound ] = useState("synopsis")
-
+    const [ discardedNumberToBeFound, setDiscardedNumberToBeFound] = useState("")
     return (
         <div id="game-screen">
             <CardsInDeck
@@ -15,6 +15,11 @@ export default function GameScreen() {
             <div className="cards">
                 <CardContainer numberToBeFound={numberToBeFound} />
             </div>
+            <CardsDiscarded 
+                discardedNumberToBeFound={discardedNumberToBeFound} 
+                setDiscardedNumberToBeFound={setDiscardedNumberToBeFound}
+            />
+
         </div>
     )
 }
