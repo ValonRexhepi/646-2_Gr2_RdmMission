@@ -1,12 +1,17 @@
 import React, { useState } from "react"
 import { FiSearch } from "react-icons/fi"
 
-export default function SearchInput({ setNumberToBeFound }) {
-    const [ currentNum, setCurrenNum ] = useState("")
+export default function SearchInput({ setNumberToBeFound, setNotFoundTxt }) {
+    const [ currentNum, setCurrentNum ] = useState("")
 
     const handleSubmit = (e) => {
         e.preventDefault()
         setNumberToBeFound(currentNum)
+    }
+
+    const handleChange = (e) => {
+        setNotFoundTxt("")
+        setCurrentNum((e.target.value).replace(/\s/g, "").toUpperCase())
     }
 
     return (
@@ -16,7 +21,7 @@ export default function SearchInput({ setNumberToBeFound }) {
                 <input
                     className="search-input"
                     placeholder="Numéro de la carte... (Card number...)"
-                    onChange={(e) => setCurrenNum((e.target.value).replace(/\s/g, "").toUpperCase())}
+                    onChange={handleChange}
                 />
             </form>
         </div>

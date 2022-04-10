@@ -1,26 +1,18 @@
-import React, { useEffect, useState } from "react"
-import { storeDataLS, getDataLS } from "../../utils/helpers"
+import React, { useEffect } from "react"
+import { useImgSrc } from "../../contexts/ImgSrcContext"
 
 import Card from "./Card"
 
 export default function CardContainer({ numberToBeFound }) {
-    const [ imgSrc, setImgSrc ] = useState([])
-
-    useEffect(() => {
-        const cardImgs = getDataLS("cards")
-        setImgSrc(cardImgs)
-        console.log(cardImgs)
-    }, [])
+    const { imgSrc, setImgSrc } = useImgSrc()
 
     useEffect(() => {
         if (numberToBeFound) {
             try {
                 const src = require(`../../assets/cards/card${numberToBeFound}.jpg`)
                 setImgSrc([...new Set([ ...imgSrc, src ])])
-                storeDataLS("cards", [...new Set([ ...imgSrc, src ])])
             } catch {
                 setImgSrc([...new Set([ ...imgSrc ])])
-                storeDataLS("cards", [...new Set([ ...imgSrc ])])
                 return
             }
         }

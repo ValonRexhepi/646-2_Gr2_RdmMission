@@ -1,6 +1,6 @@
 const cards = [
     {
-        number: 1,
+        number: "1",
         isDiscarded: false,
         hint: "The infographic shows the number of hotels listed",
         solution: "64 hidden in the number of hotels à take the 64 card"    

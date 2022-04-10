@@ -4,8 +4,7 @@ import { getDataLS } from "../../utils/helpers"
 import ForwardContainer from "./ForwardContainer"
 import BackwardContainer from "./BackwardContainer"
 
-export default function Clock() {
-    const [ isForward, setIsForward ] = useState(false)
+export default function Clock({ isForward, setIsForward }) {
     const [ initialBTime, setInitialBTime ] = useState(null)
     const [ initialFTime, setInitialFTime ] = useState(null)
 
@@ -29,7 +28,7 @@ export default function Clock() {
         <div>
             {
                 isForward
-                ? <ForwardContainer initialFTime={initialFTime} />
+                ? <ForwardContainer initialFTime={initialFTime} setIsForward={setIsForward} />
                 : <BackwardContainer initialBTime={initialBTime} setIsForward={setIsForward} />
             }
         </div>

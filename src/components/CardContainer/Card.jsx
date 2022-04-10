@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react"
 import Draggable from "react-draggable"
 
+import CardToolbar from "./CardToolbar"
+
 export default function Card({ source }) {
     const [ position, setPosition ] = useState({ x: 0, y: 0 })
 
@@ -26,6 +28,8 @@ export default function Card({ source }) {
                 className="card"
                 style={!source.includes("synopsis") && cardPosition.current}
             >
+                {!source.includes("synopsis") && <CardToolbar source={source} />}
+
                 <img 
                     src={source} 
                     alt="Card" 

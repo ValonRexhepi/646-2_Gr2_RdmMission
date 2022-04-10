@@ -127,8 +127,11 @@ h4 {
 .card {
   position: absolute;
   background: var(--orange);
-  padding: 2.6rem 0.5rem 0.3rem 0.5rem;
+  padding: 0.5rem;
   cursor: move;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .card.moving {
@@ -137,6 +140,37 @@ h4 {
 
 .card img {
   cursor: default;
+}
+
+.card section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.card-toolbar {
+  padding: 0 0 0.5rem 0;
+  width: 25%;
+  /* background: yellow; */
+  /* cursor: default; */
+}
+
+.card-toolbar button {
+  background: none;
+  margin: 0 0.3rem 0 0; 
+  padding: 0.3rem 0.4rem;  
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+}
+
+.card-toolbar button:hover {
+  background-color: var(--light-orange);
+  color: black;
+}
+
+.card-toolbar svg {
+  font-size: 1.6rem;
 }
 
 .timer {
@@ -152,6 +186,7 @@ h4 {
 #forward-time,
 #checkpoint-forward-time,
 #backward-time,
-#checkpoint-backward-time {
+#checkpoint-backward-time,
+.stop-btn {
   display: none;
 }

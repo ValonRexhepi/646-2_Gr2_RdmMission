@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react"
 import cards from "../../constants/cards"
 
-export default function CardList({ numberToBeFound }) {
+export default function CardList({ numberToBeFound, notFoundTxt, setNotFoundTxt }) {
     const [ cardFound, setCardFound ] = useState(null)
-    const [ notFoundTxt, setNotFoundTxt ] = useState(null)
 
     useEffect(() => {
         if (cards) {
@@ -24,8 +23,7 @@ export default function CardList({ numberToBeFound }) {
                 : setNotFoundTxt("")
             }
         }
-        
-    }, [numberToBeFound])
+    }, [numberToBeFound, setNotFoundTxt])
 
     return (
         <div>
