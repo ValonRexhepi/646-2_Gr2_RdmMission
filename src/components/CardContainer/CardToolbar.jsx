@@ -1,6 +1,7 @@
 import React from "react"
 import { HiOutlineLightBulb } from "react-icons/hi"
 import { GiMagnifyingGlass } from "react-icons/gi"
+import { HiOutlineX } from 'react-icons/hi'
 import { Tooltip } from "@mui/material"
 import { usePopup } from "../../contexts/PopupContext"
 import { useCard } from "../../contexts/CardContext"
@@ -34,6 +35,11 @@ export default function CardToolbar({ source }) {
             <Tooltip title="Solution">
                 <button onClick={showSolution}>
                     <HiOutlineLightBulb />
+                </button>
+            </Tooltip>
+            <Tooltip title="Close">
+                <button onClick={console.log("source:" + source)}>
+                    <HiOutlineX />
                 </button>
             </Tooltip>
         </section>
