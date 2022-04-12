@@ -3,7 +3,7 @@ import { useImgSrc } from "../../contexts/ImgSrcContext"
 
 import Card from "./Card"
 
-export default function CardContainer({ numberToBeFound }) {
+export default function CardContainer({ numberToBeFound, discardedList, setDiscardedList }) {
     const { imgSrc, setImgSrc } = useImgSrc()
 
     useEffect(() => {
@@ -23,7 +23,7 @@ export default function CardContainer({ numberToBeFound }) {
         <>
             {
                 imgSrc 
-                ? imgSrc.map((source, i) => <Card key={i} source={source} />)
+                ? imgSrc.map((source, i) => <Card key={i} source={source} discardedList={discardedList} setDiscardedList={setDiscardedList} />)
                 : null
             }
         </>

@@ -6,9 +6,10 @@ import { Tooltip } from "@mui/material"
 import { usePopup } from "../../contexts/PopupContext"
 import { useCard } from "../../contexts/CardContext"
 import cards from "../../constants/cards"
+import { storeDataLS } from "../../utils/helpers"
 //import { useDiscarded } from "../../contexts/DiscardedContext"
 
-export default function CardToolbar({ source }) {
+export default function CardToolbar({ source, discardedList, setDiscardedList }) {
     const { setContent } = usePopup()
     const { setCard } = useCard()    
 //    const { setDiscarded } = useDiscarded()
@@ -30,13 +31,17 @@ export default function CardToolbar({ source }) {
     const discardCard = () => {
         const selected = (source?.split("/")[3]?.split(".")[0]).toLowerCase()
         const cardIndex = cards?.findIndex((num => `card${num?.number}` === selected))
-        console.log("cardindex"+cardIndex)
-        if(cards && cardIndex) {
-            cards[cardIndex].isDiscarded=true
+        // console.log("cardindex" + cardIndex)
+        if (cards && cardIndex) {
+            cards[cardIndex].isDiscarded = true
         }
-        console.log("cards"+cards[cardIndex].isDiscarded)
 
-        document.getElementById(source?.split("/")[3]?.split(".")[0]).style.display='none'
+        setDiscardedList([ ...discardedList, cards[cardIndex] ])    
+        storeDataLS("discarded-cards", [...new Set([ ...discardedList, cards[cardIndex] ])])
+        // console.log(cards[cardIndex].isDiscarded)
+        // console.log("cards" + cards[cardIndex].isDiscarded)
+
+        document.getElementById(source?.split("/")[3]?.split(".")[0]).style.visibility='hidden'
         
     }
 
