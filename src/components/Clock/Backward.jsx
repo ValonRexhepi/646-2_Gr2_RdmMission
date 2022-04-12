@@ -87,7 +87,7 @@ export default function Backward({ setIsForward }) {
     return (
         <div className="timer">
             <Timer
-                initialTime={1000 * 60} 
+                initialTime={1000 * 60 * 60} 
                 direction="backward"
                 checkpoints={[
                     {
