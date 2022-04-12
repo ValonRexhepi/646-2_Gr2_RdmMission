@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Timer from "react-compound-timerv2"
+import { storeDataLS } from "../../utils/helpers"
 import { usePopup } from "../../contexts/PopupContext"
 import { useHintSolution } from "../../contexts/HintSolutionContext"
 import { useCard } from "../../contexts/CardContext"
@@ -20,15 +21,15 @@ export default function Backward({ setIsForward }) {
         return () => clearInterval(interval)
     }, [count])
 
-    // useEffect(() => {
-    //     setStoreTime(true)
-    //     setUpdateTime(false)
-    //     const timeEl = document.getElementById("backward-time")
-    //     if (storeTime && !updateTime) {
-    //         storeDataLS("backward-time", timeEl.innerHTML)
-    //     }
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [count])
+    useEffect(() => {
+        setStoreTime(true)
+        // setUpdateTime(false)
+        const timeEl = document.getElementById("backward-time")
+        if (storeTime) {
+            storeDataLS("backward-time", timeEl.innerHTML)
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [count])
 
     useEffect(() => {
         const timeEl = document.getElementById("backward-time")
@@ -39,7 +40,9 @@ export default function Backward({ setIsForward }) {
         if (storeTime && updateTime && content.isHint) {
             stopBtn.click()
             const temp = Math.floor(Math.abs(Number(backwardTime) - (30 * 1000)))
-            temp < 2900
+            console.log("bt", backwardTime)
+            console.log("t", temp)
+            backwardTime < 30000
             ? setHintSolution({ 
                 isOpen: true, 
                 isHint: true, 
@@ -63,7 +66,7 @@ export default function Backward({ setIsForward }) {
                 isHint: true, 
                 text: card.solution,
                 key: "backward-time",
-                time: "100"
+                time: "50"
             })
             : setHintSolution({ 
                 isOpen: true, 
@@ -84,7 +87,7 @@ export default function Backward({ setIsForward }) {
     return (
         <div className="timer">
             <Timer
-                initialTime={1000 * 60 * 60} 
+                initialTime={1000 * 60} 
                 direction="backward"
                 checkpoints={[
                     {

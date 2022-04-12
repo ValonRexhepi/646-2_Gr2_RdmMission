@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Timer from "react-compound-timerv2"
+import { storeDataLS } from "../../utils/helpers"
 import { usePopup } from "../../contexts/PopupContext"
 import { useHintSolution } from "../../contexts/HintSolutionContext"
 import { useCard } from "../../contexts/CardContext"
@@ -48,14 +49,14 @@ export default function Forward() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [content, updateTime, content])
 
-    // useEffect(() => {
-    //     setStoreTime(true)
-    //     const timeEl = document.getElementById("forward-time")
-    //     if (storeTime) {
-    //         storeDataLS("forward-time", timeEl.innerHTML)
-    //     }
-    // // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [count])
+    useEffect(() => {
+        setStoreTime(true)
+        const timeEl = document.getElementById("forward-time")
+        if (storeTime) {
+            storeDataLS("forward-time", timeEl.innerHTML)
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [count])
 
     useEffect(() => {
         setStoreTime(false)
