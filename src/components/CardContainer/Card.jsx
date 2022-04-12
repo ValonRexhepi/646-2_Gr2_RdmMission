@@ -24,12 +24,13 @@ export default function Card({ source }) {
             onDrag={handleDrag}
         >
             <div 
+                id={source?.split("/")[3]?.split(".")[0]}
                 ref={cardRef}
                 className="card"
                 style={!source.includes("synopsis") && cardPosition.current}
             >
                 {!source.includes("synopsis") && <CardToolbar source={source} />}
-
+                
                 <img 
                     src={source} 
                     alt="Card" 
