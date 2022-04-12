@@ -13,7 +13,7 @@ export default function GameScreen() {
                 setNumberToBeFound={setNumberToBeFound}
             />
             <div className="cards">
-                <CardContainer numberToBeFound={numberToBeFound} />
+                <CardContainer numberToBeFound={numberToBeFound} discardedNumberToBeFound={discardedNumberToBeFound}/>
             </div>
             <CardsDiscarded 
                 discardedNumberToBeFound={discardedNumberToBeFound} 

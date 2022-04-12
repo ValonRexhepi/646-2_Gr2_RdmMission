@@ -6,10 +6,12 @@ import { Tooltip } from "@mui/material"
 import { usePopup } from "../../contexts/PopupContext"
 import { useCard } from "../../contexts/CardContext"
 import cards from "../../constants/cards"
+//import { useDiscarded } from "../../contexts/DiscardedContext"
 
 export default function CardToolbar({ source }) {
     const { setContent } = usePopup()
-    const { setCard } = useCard()
+    const { setCard } = useCard()    
+//    const { setDiscarded } = useDiscarded()
 
     const showHint = () => {
         setContent({ isOpen: true, msg: "Showing hint costs 30 seconds of your time are you sure to continue?" })
@@ -25,6 +27,19 @@ export default function CardToolbar({ source }) {
         setCard(card)
     }
 
+    const discardCard = () => {
+        const selected = (source?.split("/")[3]?.split(".")[0]).toLowerCase()
+        const cardIndex = cards?.findIndex((num => `card${num?.number}` === selected))
+        console.log("cardindex"+cardIndex)
+        if(cards && cardIndex) {
+            cards[cardIndex].isDiscarded=true
+        }
+        console.log("cards"+cards[cardIndex].isDiscarded)
+
+        document.getElementById(source?.split("/")[3]?.split(".")[0]).style.display='none'
+        
+    }
+
     return (
         <section className="card-toolbar">
             <Tooltip title="Hint">
@@ -38,7 +53,7 @@ export default function CardToolbar({ source }) {
                 </button>
             </Tooltip>
             <Tooltip title="Close">
-                <button onClick={console.log("source:" + source)}>
+                <button onClick={discardCard}>
                     <HiOutlineX />
                 </button>
             </Tooltip>
