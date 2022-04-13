@@ -66,7 +66,7 @@ export default function CardList({ discardedNumberToBeFound, discardedList, setD
                 setNotFoundTxt("")
             } else {
                 setNotFoundTxt("Ce numéro est incorrect ou ne correspond pas à cette étape, entrez un autre numéro !")
-                setDiscardedList([])
+                setDiscardedList([...discarded])
             }
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -76,7 +76,7 @@ export default function CardList({ discardedNumberToBeFound, discardedList, setD
         <div>
             <h4>Cartes défaussées (Cards Discarded)</h4>
             <div>
-                {discardedList &&
+                {discardedList && notFoundTxt === "" &&
                     discardedList.map((card, i) => (
                         <div key={i}>
                             <button onClick={() => console.log("bring back card "+card.number)} key={i}>
