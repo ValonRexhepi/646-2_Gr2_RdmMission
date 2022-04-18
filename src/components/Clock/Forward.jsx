@@ -5,7 +5,7 @@ import { usePopup } from "../../contexts/PopupContext"
 import { useHintSolution } from "../../contexts/HintSolutionContext"
 import { useCard } from "../../contexts/CardContext"
 
-export default function Forward() {
+export default function Forward({ isPenalty }) {
     const { content } = usePopup()
     const { setHintSolution } = useHintSolution()
     const { card } = useCard()
@@ -46,8 +46,13 @@ export default function Forward() {
                 time: String(Math.abs(Number(forwardTime) + (60 * 1000)))
             })
         }
+
+        if (storeTime && isPenalty) {
+            storeDataLS("forward-time", String(Math.abs(Number(forwardTime) + (60 * 1000))))
+            window.location.reload(true)
+        }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [content, updateTime, content])
+    }, [content, updateTime, content, isPenalty])
 
     useEffect(() => {
         setStoreTime(true)

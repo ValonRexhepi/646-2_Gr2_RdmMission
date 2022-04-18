@@ -5,7 +5,7 @@ import { usePopup } from "../../contexts/PopupContext"
 import { useHintSolution } from "../../contexts/HintSolutionContext"
 import { useCard } from "../../contexts/CardContext"
 
-export default function Backward({ setIsForward }) {
+export default function Backward({ setIsForward, isPenalty }) {
     const { content } = usePopup()
     const { setHintSolution } = useHintSolution()
     const { card } = useCard()
@@ -55,7 +55,7 @@ export default function Backward({ setIsForward }) {
                 isHint: true, 
                 text: card.hint,
                 key: "backward-time",
-                time:  String(temp)
+                time: String(temp)
             })
         } else if (storeTime && updateTime && content.isSolution) {
             stopBtn.click()
@@ -73,8 +73,17 @@ export default function Backward({ setIsForward }) {
                 isHint: false, 
                 text: card.solution,
                 key: "backward-time",
-                time:  String(temp)
+                time: String(temp)
             })
+        }
+
+        if (storeTime && isPenalty) {
+            stopBtn.click()
+            const temp = Math.floor(Math.abs(Number(backwardTime) - (60 * 1000)))
+            backwardTime < 60000 
+            ? storeDataLS("backward-time", "50") 
+            : storeDataLS("backward-time", String(temp))
+            window.location.reload(true)
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [count, updateTime])
