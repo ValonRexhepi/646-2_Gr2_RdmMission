@@ -5,7 +5,7 @@ import { usePopup } from "../../contexts/PopupContext"
 import { useHintSolution } from "../../contexts/HintSolutionContext"
 import { useCard } from "../../contexts/CardContext"
 
-export default function CheckpointBackward({ initialTime, setIsForward }) {
+export default function CheckpointBackward({ initialTime, setIsForward, isPenalty }) {
     const { content } = usePopup()
     const { setHintSolution } = useHintSolution()
     const { card } = useCard()
@@ -68,8 +68,17 @@ export default function CheckpointBackward({ initialTime, setIsForward }) {
                 time: String(temp)
             })
         }
+
+        if (storeTime && isPenalty) {
+            stopBtn.click()
+            const temp = Math.floor(Math.abs(Number(backwardTime) - (60 * 1000)))
+            backwardTime < 60000 
+            ? storeDataLS("backward-time", "50") 
+            : storeDataLS("backward-time", String(temp))
+            window.location.reload(true)
+        }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [count, updateTime, content])
+    }, [count, updateTime, isPenalty])
 
     useEffect(() => {
         setStoreTime(true)
