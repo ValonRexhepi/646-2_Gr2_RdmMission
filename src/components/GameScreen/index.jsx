@@ -3,6 +3,7 @@ import { useImgSrc } from "../../contexts/ImgSrcContext"
 import CardsInDeck from "../CardsInDeck"
 import CardContainer from "../CardContainer"
 import CardsDiscarded from "../CardsDiscarded"
+import cards from "../../constants/cards"
 
 export default function GameScreen({ setIsPenalty }) {
     const [ numberToBeFound, setNumberToBeFound ] = useState("synopsis")
