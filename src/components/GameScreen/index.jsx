@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-
+import { useImgSrc } from "../../contexts/ImgSrcContext"
 import CardsInDeck from "../CardsInDeck"
 import CardContainer from "../CardContainer"
 import CardsDiscarded from "../CardsDiscarded"
@@ -8,6 +8,7 @@ export default function GameScreen() {
     const [ numberToBeFound, setNumberToBeFound ] = useState("synopsis")
     const [ discardedNumberToBeFound, setDiscardedNumberToBeFound] = useState("")
     const [ discardedList, setDiscardedList] = useState([])
+    const { imgSrc, setImgSrc } = useImgSrc()
 
     return (
         <div id="game-screen">
@@ -22,6 +23,8 @@ export default function GameScreen() {
                     discardedNumberToBeFound={discardedNumberToBeFound}
                     discardedList={discardedList}
                     setDiscardedList={setDiscardedList}
+                    imgSrc={imgSrc}
+                    setImgSrc={setImgSrc}
                 />
             </div>
 
@@ -30,6 +33,8 @@ export default function GameScreen() {
                 setDiscardedNumberToBeFound={setDiscardedNumberToBeFound}
                 discardedList={discardedList}
                 setDiscardedList={setDiscardedList}
+                imgSrc={imgSrc}
+                setImgSrc={setImgSrc}
             />
         </div>
     )

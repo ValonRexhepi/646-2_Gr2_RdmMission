@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { getDataLS } from "../../utils/helpers"
 
-export default function CardList({ discardedNumberToBeFound, discardedList, setDiscardedList }) {
+export default function CardList({ discardedNumberToBeFound, discardedList, setDiscardedList, imgSrc, setImgSrc, retrieveCard }) {
     const [ cardFound,  ] = useState(null)
     const [ notFoundTxt, setNotFoundTxt ] = useState(null)
 
@@ -17,7 +17,7 @@ export default function CardList({ discardedNumberToBeFound, discardedList, setD
     
     useEffect(() => {        
         const discarded = getDataLS("discarded-cards")
-        const found = discarded.find(x => String(x.number) === discardedNumberToBeFound.replace(/\s/g, "").toLowerCase())
+        const found = discarded.find(x => String(x?.number) === discardedNumberToBeFound.replace(/\s/g, "").toLowerCase())
         
         if (!discardedNumberToBeFound) {
             setNotFoundTxt("")
@@ -40,7 +40,7 @@ export default function CardList({ discardedNumberToBeFound, discardedList, setD
                 {discardedList && notFoundTxt === "" &&
                     discardedList.map((card, i) => (
                         <div key={i}>
-                            <button onClick={() => console.log("bring back card "+card.number)} key={i}>
+                            <button onClick={() => retrieveCard(card.number)} key={i}>
                                 {card?.number}
                             </button>
                             <br/>

@@ -1,16 +1,14 @@
 import React, { useEffect } from "react"
-import { useImgSrc } from "../../contexts/ImgSrcContext"
-
 import Card from "./Card"
 
-export default function CardContainer({ numberToBeFound, discardedList, setDiscardedList }) {
-    const { imgSrc, setImgSrc } = useImgSrc()
+export default function CardContainer({ numberToBeFound, discardedList, setDiscardedList, imgSrc, setImgSrc }) {
 
     useEffect(() => {
         if (numberToBeFound && discardedList.find(x => x.number.toString() === numberToBeFound.toLowerCase())===undefined) {
             try {
                 const src = require(`../../assets/cards/card${numberToBeFound}.jpg`)
                 setImgSrc([...new Set([ ...imgSrc, src ])])
+                console.log(imgSrc)
             } catch {
                 setImgSrc([...new Set([ ...imgSrc ])])
                 return
