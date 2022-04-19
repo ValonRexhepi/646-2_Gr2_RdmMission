@@ -14,6 +14,7 @@ export default function CardsInDeck({ numberToBeFound, setNumberToBeFound }) {
             />
             <CardList
                 numberToBeFound={numberToBeFound}
+                setNumberToBeFound={setNumberToBeFound}
                 notFoundTxt={notFoundTxt}
                 setNotFoundTxt={setNotFoundTxt}
             />

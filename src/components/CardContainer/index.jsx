@@ -7,7 +7,7 @@ export default function CardContainer({ numberToBeFound, discardedList, setDisca
     const { imgSrc, setImgSrc } = useImgSrc()
 
     useEffect(() => {
-        if (numberToBeFound) {
+        if (numberToBeFound && discardedList.find(x => x.number.toString() === numberToBeFound.toLowerCase())===undefined) {
             try {
                 const src = require(`../../assets/cards/card${numberToBeFound}.jpg`)
                 setImgSrc([...new Set([ ...imgSrc, src ])])
