@@ -33,11 +33,10 @@ export default function CardToolbar({ source, discardedList, setDiscardedList })
     const discardCard = () => {
         const selected = (source?.split("/")[3]?.split(".")[0]).toLowerCase()
         const cardIndex = cards?.findIndex((num => `card${num?.number}` === selected))
-        // console.log("cardindex" + cardIndex)
         if(discardedList.findIndex(x => x.number === cards[cardIndex].number) === -1) {
             setDiscardedList([...discardedList, cards[cardIndex]])
             storeDataLS("discarded-cards", [...discardedList, cards[cardIndex]])
-            if (cards && cardIndex) {
+            if (cards && cardIndex !== -1) {
                 cards[cardIndex].isDiscarded = true
             }
             setImgSrc(imgSrc.filter(x => x !== source))
