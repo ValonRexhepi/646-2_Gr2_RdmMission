@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react"
 import Timer from "react-compound-timerv2"
+import { storeDataLS } from "../../utils/helpers"
 import { usePopup } from "../../contexts/PopupContext"
 import { useHintSolution } from "../../contexts/HintSolutionContext"
 import { useCard } from "../../contexts/CardContext"
 
-export default function Forward() {
+export default function Forward({ isPenalty }) {
     const { content } = usePopup()
     const { setHintSolution } = useHintSolution()
     const { card } = useCard()
@@ -45,17 +46,22 @@ export default function Forward() {
                 time: String(Math.abs(Number(forwardTime) + (60 * 1000)))
             })
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [content, updateTime, content])
 
-    // useEffect(() => {
-    //     setStoreTime(true)
-    //     const timeEl = document.getElementById("forward-time")
-    //     if (storeTime) {
-    //         storeDataLS("forward-time", timeEl.innerHTML)
-    //     }
-    // // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [count])
+        if (storeTime && isPenalty) {
+            storeDataLS("forward-time", String(Math.abs(Number(forwardTime) + (60 * 1000))))
+            window.location.reload(true)
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [content, updateTime, content, isPenalty])
+
+    useEffect(() => {
+        setStoreTime(true)
+        const timeEl = document.getElementById("forward-time")
+        if (storeTime) {
+            storeDataLS("forward-time", timeEl.innerHTML)
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [count])
 
     useEffect(() => {
         setStoreTime(false)

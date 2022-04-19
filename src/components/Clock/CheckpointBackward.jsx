@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react"
 import Timer from "react-compound-timerv2"
+import { storeDataLS } from "../../utils/helpers"
 import { usePopup } from "../../contexts/PopupContext"
 import { useHintSolution } from "../../contexts/HintSolutionContext"
 import { useCard } from "../../contexts/CardContext"
 
-export default function CheckpointBackward({ initialTime, setIsForward }) {
+export default function CheckpointBackward({ initialTime, setIsForward, isPenalty }) {
     const { content } = usePopup()
     const { setHintSolution } = useHintSolution()
     const { card } = useCard()
@@ -29,7 +30,9 @@ export default function CheckpointBackward({ initialTime, setIsForward }) {
         if (storeTime && updateTime && content.isHint) {
             stopBtn.click()
             const temp = Math.floor(Math.abs(Number(backwardTime) - (30 * 1000)))
-            temp < 1000
+            console.log("bt", backwardTime)
+            console.log("t", temp)
+            backwardTime < 30000
             ? setHintSolution({ 
                 isOpen: true, 
                 isHint: true, 
@@ -47,38 +50,49 @@ export default function CheckpointBackward({ initialTime, setIsForward }) {
         } else if (storeTime && updateTime && content.isSolution) {
             stopBtn.click()
             const temp = Math.floor(Math.abs(Number(backwardTime) - (60 * 1000)))
+            console.log("bt", backwardTime)
+            console.log("t", temp)
             backwardTime < 60000 
             ? setHintSolution({ 
                 isOpen: true, 
                 isHint: false, 
                 text: card.solution,
                 key: "backward-time",
-                time: "100"
+                time: "50"
             })
             : setHintSolution({ 
                 isOpen: true, 
                 isHint: false, 
                 text: card.solution,
                 key: "backward-time",
-                time:  String(temp)
+                time: String(temp)
             })
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [count, updateTime, content])
 
-    // useEffect(() => {
-    //     setStoreTime(true)
-    //     setUpdateTime(false)
-    //     const timeEl = document.getElementById("checkpoint-backward-time")
-    //     if (storeTime && !updateTime) {
-    //         storeDataLS("backward-time", timeEl.innerHTML)
-    //     }
-    // // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [count])
+        if (storeTime && isPenalty) {
+            stopBtn.click()
+            const temp = Math.floor(Math.abs(Number(backwardTime) - (60 * 1000)))
+            backwardTime < 60000 
+            ? storeDataLS("backward-time", "50") 
+            : storeDataLS("backward-time", String(temp))
+            window.location.reload(true)
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [count, updateTime, isPenalty])
+
+    useEffect(() => {
+        setStoreTime(true)
+        // setUpdateTime(false)
+        const timeEl = document.getElementById("checkpoint-backward-time")
+        if (storeTime) {
+            storeDataLS("backward-time", timeEl.innerHTML)
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [count])
 
     useEffect(() => {
         setStoreTime(false)
-        setUpdateTime(false)
+        // setUpdateTime(false)
     }, [initialTime])
 
     return (

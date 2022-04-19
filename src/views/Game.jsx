@@ -18,6 +18,7 @@ export default function Game() {
     const { session, setSession } = useSession()
     const [ isOpenRoadmap, setIsOpenRoadmap ] = useState(false)
     const [ isForward, setIsForward ] = useState(false)
+    const [ isPenalty, setIsPenalty ] = useState(false)
 
     useEffect(() => {
         const sessionId = getDataLS("sessionId")
@@ -44,6 +45,7 @@ export default function Game() {
             <Clock 
                 isForward={isForward}
                 setIsForward={setIsForward}
+                isPenalty={isPenalty}
             />
 
             <p>Session Id: {session?.id}</p>
@@ -64,7 +66,7 @@ export default function Game() {
 
             { isOpenRoadmap && <Roadmap setIsOpenRoadmap={setIsOpenRoadmap} /> }
             
-            <GameScreen />
+            <GameScreen setIsPenalty={setIsPenalty} />
 
             <Popup isForward={isForward} />
 

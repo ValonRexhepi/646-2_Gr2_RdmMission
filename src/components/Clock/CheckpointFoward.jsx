@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react"
 import Timer from "react-compound-timerv2"
+import { storeDataLS } from "../../utils/helpers"
 import { usePopup } from "../../contexts/PopupContext"
 import { useHintSolution } from "../../contexts/HintSolutionContext"
 import { useCard } from "../../contexts/CardContext"
 
-export default function CheckpointForward({ initialTime, setIsForward, numberToBeFound }) {
+export default function CheckpointForward({ initialTime, setIsForward, isPenalty }) {
     const { content } = usePopup()
     const { card } = useCard()
     const { setHintSolution } = useHintSolution()
@@ -45,21 +46,26 @@ export default function CheckpointForward({ initialTime, setIsForward, numberToB
                 time: String(Math.abs(Number(forwardTime) + (60 * 1000)))
             })
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [content, updateTime, content])
 
-    // useEffect(() => {
-    //     setUpdateTime(false)
-    //     setStoreTime(true)
-    //     const timeEl = document.getElementById("checkpoint-forward-time")
-    //     if (storeTime && !updateTime) {
-    //         storeDataLS("forward-time", timeEl.innerHTML)
-    //     }
-    // // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [count])
+        if (storeTime && isPenalty) {
+            storeDataLS("forward-time", String(Math.abs(Number(forwardTime) + (60 * 1000))))
+            window.location.reload(true)
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [content, updateTime, content, isPenalty])
 
     useEffect(() => {
-        setUpdateTime(false)
+        // setUpdateTime(false)
+        setStoreTime(true)
+        const timeEl = document.getElementById("checkpoint-forward-time")
+        if (storeTime) {
+            storeDataLS("forward-time", timeEl.innerHTML)
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [count])
+
+    useEffect(() => {
+        setUpdateTime(false)    
         setStoreTime(false)
     }, [initialTime])
 
