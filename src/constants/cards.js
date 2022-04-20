@@ -2,422 +2,422 @@ const cards = [
     {
         number: 1,
         isDiscarded: false,
-        hint: "The infographic shows the number of hotels listed",
-        solution: "64 hidden in the number of hotels à take the 64 card"    
+        hint: "L’infographie montre le nombre d’hôtels recensés",
+        solution: "64 caché dans le nombre d’hôtels → prenez la carte 64"    
     },
     {
         number: 3,
         isDiscarded: false,
-        hint: "Look at the number assigned to each deposit. Which one matches the criteria on the S2 card?",
-        solution: "The deposit is FORSBase, number 1. +70 = 71 à take the card 71"   
+        hint: "Observez le numéro attribué à chaque dépôt. Lequel correspond aux critères mentionnés sur la carte S2 ?",
+        solution: "Le dépôt est FORSBase, le numéro 1. +70 = 71 → prenez la carte 71"   
     },
     {
         number: 4,
         isDiscarded: false,
-        hint: "Nothing to find",
-        solution: "Nothing to find"    
+        hint: "Rien à trouver",
+        solution: "Rien à trouver"    
     },
     {
         number: 6,
         isDiscarded: false,
-        hint: "We'll have to walk a bit",
-        solution: "11th floor à take card 11"    
+        hint: "Il va falloir marcher un peu",
+        solution: "11e étage → prenez la carte 11"    
     },
     {
         number: 7,
         isDiscarded: false,
-        hint: "Which identifier corresponds to that of a dataset? Use card I 3 as a guide.",
-        solution: "The doi is correct. 10.1840/309registries à take card 84"    
+        hint: "Quel identifiant correspond à celui d’un jeu de données ? Aidez-vous de la carte I 3.",
+        solution: "Le doi est correct. 10.1840/309registries → prenez la carte 84"    
     },
     {
         number: 8,
         isDiscarded: false,
-        hint: "Count the post-its on the desk",
-        solution: "There are 4 large post-it notes on the desk of card 59 à take card 4"    
+        hint: "Comptez les post-itssur le bureau",
+        solution: "On compte 4 grands post-it sur le bureau de la carte 59 → prenez la carte 4"    
     },
     {
         number: 9,
         isDiscarded: false,
-        hint: "Take a good look at the post-its. Your phone will also be useful.",
-        solution: "Take the S8 card (in the phone). Take the 85 card (post-it on the computer screen)."    
+        hint: "Regardez bien les post-its. Votre téléphone vous sera aussi utile.",
+        solution: "Prenez la carte S8 (dans le téléphone) Prenez la carte 85 (post-it sur l’écran d’ordinateur)"    
     },
     {
         number: 11,
         isDiscarded: false,
-        hint: "Did you make a note of the date? You may also find the books useful.",
-        solution: "Take card 17 (in Roman numerals on a book). Take card 19 (circled in red on the calendar)."
+        hint: "Avez-vous bien noté la date ? Les livres vous seront peut-être aussi utiles.",
+        solution: "Prenez la carte 17 (en chiffres romains sur un livre) Prenez la carte 19 (entouré en rouge sur le calendrier)"
     },
     {
         number: 12,
         isDiscarded: false,
-        hint: "Penalty card",
-        solution: "Penalty card"
+        hint: "Carte pénalité",
+        solution: "Carte pénalité"
     },
     {
         number: 13,
         isDiscarded: false,
-        hint: "Penalty card",
-        solution: "Penalty card"
+        hint: "Carte pénalité",
+        solution: "Carte pénalité"
     },
     {
         number: 15,
         isDiscarded: false,
-        hint: "Look carefully at the name of the page in the document",
-        solution: "This is the same document as card 16! Add them together. 16 + 15 = 31 à take card 31"
+        hint: "Regardez bien le nom de la page dans le document",
+        solution: "C’est le même document que la carte 16 ! Additionnez-les. 16 + 15 = 31 → prenez la carte 31"
     },
     {
         number: 16,
         isDiscarded: false,
-        hint: "Look carefully at the name of the page in the document",
-        solution: "This is the same document as card 15! Add them together. 16 + 15 = 31 à take card 31"
+        hint: "Regardez bien le nom de la page dans le document",
+        solution: "C’est le même document que la carte 15 ! Additionnez-les. 16 + 15 = 31 → prenez la carte 31"
     },
     {
         number: 17,
         isDiscarded: false,
-        hint: "This chapter looks interesting and the book seems to be open at a strategic location",
-        solution: "Chapter 30 à take card 30. The page numbers I 67 and I 68 refer to the corresponding role à cards take the cards I 67 and I 68."
+        hint: "Ce chapitre semble intéressant et le livre semble ouvert à un emplacement stratégique",
+        solution: "Chapitre 30 → prenez la carte 30. Les numéros de pages I 67 et I 68 renvoient aux cartes rôle correspondantes → prenez les cartes I 67 et I 68"
     },
     {
         number: 18,
         isDiscarded: false,
-        hint: "Penalty card",
-        solution: "Penalty card"
+        hint: "Carte pénalité",
+        solution: "Carte pénalité"
     },
     {
         number: 19,
         isDiscarded: false,
-        hint: "It seems that it is necessary to add a file to launch the analysis",
-        solution: "19 + 60 (card with cleanest data) = 79  à take card 79"
+        hint: "Il semble qu’il soit nécessaire d’ajouter un fichier pour lancer l’analyse",
+        solution: "19 + 60 (carte avec les données les plus propres) = 79 → prenez la carte 79"
     },
     {
         number: 21,
         isDiscarded: false,
-        hint: "One file seems particularly interesting",
-        solution: "Dossier_Number twenty-six.zip à take card 26"
+        hint: "Un dossier semble particulièrement intéressant",
+        solution: "Dossier_Numéro vingt-six.zip → prenez la carte 26"
     },
     {
         number: 22,
         isDiscarded: false,
-        hint: "Have you observed the corkboard behind your colleague's desk?",
-        solution: "Take card 1 indicated on the post-it à take card 1"
+        hint: "Avez-vous observé le tableau de liège derrière le bureau de votre collègue ?",
+        solution: "Prendre carte 1 indiqué sur le post-it → prenez la carte 1"
     },
     {
         number: 25,
         isDiscarded: false,
-        hint: "Penalty card",
-        solution: "Penalty card"
+        hint: "Carte pénalité",
+        solution: "Carte pénalité"
     },
     {
         number: 26,
         isDiscarded: false,
-        hint: "Which file is named correctly? Use the information given on the S10 card.",
-        solution: "OFS_Continental_20200628.png à take card 28"
+        hint: "Quel fichier est nommé correctement ? Aidez-vous des informations données sur la carte S10.",
+        solution: "OFS_Continental_20200628.png → prenez la carte 28"
     },
     {
         number: 28,
         isDiscarded: false,
-        hint: "Look at the key box and the reception panel",
-        solution: "Number 92 in the key box à take card 92. R36ception: take card 36."
+        hint: "Observez la boite à cléset le panneau réception",
+        solution: "Numéro 92 dans la boîte à clés → prenez la carte 92 R36ception : prenez la carte 36"
     },
     {
         number: 29,
         isDiscarded: false,
-        hint: "This is a coded message to be deciphered! Look at card 59 to find the title of the message, which will serve as a decoding key.",
-        solution: "Writing your DMP - A. Administrative information - B. Data collection - C. Documentation and Metadata - D. Ethics and Legal Compliance - E. Storage and backup - F. Selection and retention - G. Data Sharing - H. Responsibilities and Resources"
+        hint: "Il s’agit d’un message codé à déchiffrer ! Observer la carte 59 pour trouver le titre du message, qui servira de clé de décodage.",
+        solution: "Rédiger son DMP A. Informations administratives B. Collecte des données C. Documentation et métadonnées D. Éthique et conformité légale E. Stockage et sauvegarde F. Sélection et conservation G. Partage de données H. Responsabilités et ressources"
     },
     {
         number: 30,
         isDiscarded: false,
-        hint: "Read the information in bold and use the card I 68.",
-        solution: "The card to be introduced in the software is the 60"
+        hint: "Lisez bien les informations en gras et aidez-vous de la carte I 68.",
+        solution: "La carte à introduire dans le logiciel est la carte 60"
     },
     {
         number: 31,
         isDiscarded: false,
-        hint: "Nothing to find. Take the S1 card.",
-        solution: "Nothing to find. Take the S1 card."
+        hint: "Rien à trouver. Prenez la carte S1.",
+        solution: "Rien à trouver. Prenez la carte S1."
     },
     {
         number: 32,
         isDiscarded: false,
-        hint: "Nothing to find",
-        solution: "Nothing to find"
+        hint: "Rien à trouver",
+        solution: "Rien à trouver"
     },
     {
         number: 35,
         isDiscarded: false,
-        hint: "Penalty card",
-        solution: "Penalty card"
+        hint: "Carte pénalité",
+        solution: "Carte pénalité"
     },
     {
         number: 36,
         isDiscarded: false,
-        hint: "Some fields in the questionnaire appear to be completed",
-        solution: "Numbers 15 and 16 à take cards 15 and 16"
+        hint: "Certains champs du questionnaire semblent remplis",
+        solution: "Numéros 15 et 16 → prenez les cartes 15 et 16"
     },
     {
         number: 37,
         isDiscarded: false,
-        hint: "Nothing to find, you are at the end of the game!",
-        solution: "Nothing to find, you are at the end of the game!"
+        hint: "Rien à trouver, vous êtes à la fin du jeu !",
+        solution: "Rien à trouver, vous êtes à la fin du jeu !"
     },
     {
         number: 44,
         isDiscarded: false,
-        hint: "Call on Ines the computer scientist by taking the I 22 card",
-        solution: "Take the I22 card"
+        hint: "Faites appel à Inès l’informaticienne en prenant la carte I 22",
+        solution: "Prenez la carte I22"
     },
     {
         number: 47,
         isDiscarded: false,
-        hint: "Take a good look at the screen. Your phone will also help you.",
-        solution: "Take the S5 card (on the phone). Take card 3 (on the screen, re3data.org)"
+        hint: "Regardez bien l’écran. Votre téléphone vous sera aussi utile.",
+        solution: "Prenez la carte S5 (sur le téléphone) Prenez la carte 3 (sur l’écran, re3data.org)"
     },
     {
         number: 51,
         isDiscarded: false,
-        hint: "After replying to this message, please note that others are waiting to be read",
-        solution: "47 unread messages à take the card 47"
+        hint: "Après avoir répondu à ce message, sachez que d’autres sont en attente de lecture",
+        solution: "47 messages non lus →prenez la carte 47"
     },
     {
         number: 56,
         isDiscarded: false,
-        hint: "Do all the cells look right?",
-        solution: "This is not the correct card, the data is completely mixed up and there are empty cells without explanation."
+        hint: "Est-ce que toutes les cellules semblent correctes ?",
+        solution: "Ce n’est pas la carte correcte, les données sont complètement mélangées et il y a des cellules vides sans explication."
     },
     {
         number: 59,
         isDiscarded: false,
-        hint: "Look closely at the screen and the date the DMP is due. Need a little break?",
-        solution: "Take card 8 (in the coffee cup). Take card 21 (in the screen). Take card 29 (in the notebook)"
+        hint: "Regardez bien l'écran et la date à laquelle le DMP doit être rédigé. Besoin d’une petite pause ?",
+        solution: "Prenez la carte 8 (dans la tasse à café) Prenez la carte 21 (dans l’écran) Prenez la carte 29 (dans le carnet de notes)"
     },
     {
         number: 60,
         isDiscarded: false,
-        hint: "Do all the cells look right?",
-        solution: "This is the correct card! You can add it in the analysis software"
+        hint: "Est-ce que toutes les cellules semblent correctes ?",
+        solution: "C’est la carte correcte ! Vous pouvez l’ajouter dans le logiciel d’analyse"
     },
     {
         number: 61,
         isDiscarded: false,
-        hint: "Please read the information in bold",
-        solution: "Take cards 68 and S28"
+        hint: "Lisez bien les informations en gras",
+        solution: "Prenez les cartes 68 et S28"
     },
     {
         number: 64,
         isDiscarded: false,
-        hint: "Contact the IT department",
-        solution: "Phone number 0099 à take card 99"
+        hint: "Prenez contact avec le service informatique",
+        solution: "N° de téléphone 0099 → prenez la carte 99"
     },
     {
         number: 65,
         isDiscarded: false,
-        hint: "Penalty card",
-        solution: "Penalty card"
+        hint: "Carte pénalité",
+        solution: "Carte pénalité"
     },
     {
         number: 68,
         isDiscarded: false,
-        hint: "A specific beacon should help you move forward",
-        solution: "<card cardAPrendre=''forNextStep''> àtake card 51"
+        hint: "Une balise précise devrait vous aider à avancer",
+        solution: "<carte carteAPrendre=’’pourEtapeSuivante’’> → prenez la carte51"
     },
     {
         number: 69,
         isDiscarded: false,
-        hint: "Do all the cells look right?",
-        solution: "This is not the correct card, the data is not standardized, some cells are empty, the N/A are heterogeneous."
+        hint: "Est-ce que toutes les cellules semblent correctes ?",
+        solution: "Ce n’est pas la carte correcte, les données sont non standardisées, certaines cellules sont vides, les N/A sont hétérogènes."
     },
     {
         number: 71,
         isDiscarded: false,
-        hint: "Here's a tip: the data can be published in plain sight and does not contain sensitive data. Use the J1 card.",
-        solution: "The data is open à take the card 96"
+        hint: "Voici un conseil: les données peuvent être publiées au vu de tous et ne contiennent pas de données sensibles. Aidez-vous de la carte J1.",
+        solution: "Les données sont ouvertes → prenez la carte 96"
     },
     {
         number: 75,
         isDiscarded: false,
-        hint: "Penalty card",
-        solution: "Penalty card"
+        hint: "Carte pénalité",
+        solution: "Carte pénalité"
     },
     {
         number: 77,
         isDiscarded: false,
-        hint: "Penalty card",
-        solution: "Penalty card"
+        hint: "Carte pénalité",
+        solution: "Carte pénalité"
     },
     {
         number: 79,
         isDiscarded: false,
-        hint: "The researcher seems very happy!",
-        solution: "Number 22 on the sweater à take card 22"
+        hint: "Le chercheur semble très heureux !",
+        solution: "Numéro 22 sur le pull → prenez la carte 22"
     },
     {
         number: 81,
         isDiscarded: false,
-        hint: "Ask the Information Specialist for advice by taking the S13 card",
-        solution: "Take the S13 card"
+        hint: "Demandez conseil au spécialiste en information documentaireen prenant la carte S13",
+        solution: "Prenez la carte S13"
     },
     {
         number: 82,
         isDiscarded: false,
-        hint: "Penalty card",
-        solution: "Penalty card"
+        hint: "Carte pénalité",
+        solution: "Carte pénalité"
     },
     {
         number: 84,
         isDiscarded: false,
-        hint: "You have to go somewhere",
-        solution: "Office n°9 à take card 9"
+        hint: "Il faut vous rendre quelque part",
+        solution: "Bureau n°9 → prenez la carte 9"
     },
     {
         number: 85,
         isDiscarded: false,
-        hint: "It is necessary to make an individual operation with the number of views and downloads",
-        solution: "Add up the individual numbers of views and downloads. 1+5+2+3+7+7+1+1+0+6+4+0 = 37 à take card 37"
+        hint: "Il faut faire une opération individuelle avec lenombre de vues et de téléchargements",
+        solution: "Additionner les chiffres individuels des vues et des téléchargements 1+5+2+3+7+7+1+1+0+6+4+0 = 37 → prenez la carte 37"
     },
     {
         number: 88,
         isDiscarded: false,
-        hint: "Penalty card",
-        solution: "Penalty card"
+        hint: "Carte pénalité",
+        solution: "Carte pénalité"
     },
     {
         number: 92,
         isDiscarded: false,
-        hint: "A small addition will certainly be necessary",
-        solution: "3+2+1 = 6 à take card 6"
+        hint: "Une petite addition sera certainement nécessaire",
+        solution: "3+2+1 = 6 → prenez la carte 6"
     },
     {
         number: 93,
         isDiscarded: false,
-        hint: "Penalty card",
-        solution: "Penalty card"
+        hint: "Carte pénalité",
+        solution: "Carte pénalité"
     },
     {
         number: 94,
         isDiscarded: false,
-        hint: "Penalty card",
-        solution: "Penalty card"
+        hint: "Carte pénalité",
+        solution: "Carte pénalité"
     },
     {
         number: 95,
         isDiscarded: false,
-        hint: "Penalty card",
-        solution: "Penalty card"
+        hint: "Carte pénalité",
+        solution: "Carte pénalité"
     },
     {
         number: 96,
         isDiscarded: false,
-        hint: "Which license allows free reuse provided that the authors of a work are credited? Help yourself to the J9 card",
-        solution: "Licence CC BY à take the card 7."
+        hint: "Quelle licence permet une réutilisation libre à condition de créditer les auteur-e-s d’un travail ? Aidez-vous de la carte J9",
+        solution: "Licence CC BY → prenez la carte 7"
     },
     {
         number: 99,
         isDiscarded: false,
-        hint: "It looks like there's a logo on the edge of the desktop, right? The various screens also catch your eye.",
-        solution: "Take card 44 (screen). Take card 81 (edge of the desk)"
+        hint: "On dirait qu’il y a un logo sur le bord du bureau, non?Les différents écrans attirent aussi votre attention.",
+        solution: "Prenez la carte 44 (écran) Prenez la carte 81 (bord du bureau)"
     },
     {
         number: "i22",
         isDiscarded: false,
-        hint: "Theory on file formats. Take the I 51 card",
-        solution: "Theory on file formats. Take the I 51 card"
+        hint: "Théorie sur les formats de fichiers. Prenez la carte I 51",
+        solution: "Théorie sur les formats de fichiers. Prenez la carte I 51"
     },
     {
         number: "i3",
         isDiscarded: false,
-        hint: "Theory on identifiers. Help to find the solution of the card 7",
-        solution: "Theory on identifiers. Help to find the solution of the card 7"   
+        hint: "Théorie sur les identifiants. Aide à trouver la solution de la carte 7",
+        solution: "Théorie sur les identifiants. Aide à trouver la solution de la carte 7"   
     },
     {
         number: "i51",
         isDiscarded: false,
-        hint: "Find all the numbers and add them up",
-        solution: "Theory on file formats. Take the I 51 card"
+        hint: "Repérez tous les chiffres et additionnez-les",
+        solution: "5+2+3+4+4+2+3+3+3+3 = 32 → prenez la carte 32"
     },
     {
         number: "i67",
         isDiscarded: false,
-        hint: "Theory of data cleansing",
-        solution: "Theory of data cleansing"
+        hint: "Théorie sur le nettoyage des données",
+        solution: "Théorie sur le nettoyage des données"
     },
     {
         number: "i68",
         isDiscarded: false,
-        hint: "Data cleaning theory. Helps to identify the card on which the data is best cleaned",
-        solution: "Data cleaning theory. Helps to identify the card on which the data is best cleaned"
+        hint: "Théorie sur le nettoyage des données. Aide à identifier la carte sur laquelle les données sont le mieux nettoyées",
+        solution: "Théorie sur le nettoyage des données. Aide à identifier la carte sur laquelle les données sont le mieux nettoyées"
     },
     {
         number: "j1",
         isDiscarded: false,
-        hint: "Theory on open data. Help to find the solution of the card 71",
-        solution: "Theory on open data. Help to find the solution of the card 71"    
+        hint: "Théorie sur l’ouverture des données. Aide à trouver la solution de la carte 71",
+        solution: "Théorie sur l’ouverture des données. Aide à trouver la solution de la carte 71"    
     },
     {
         number: "j9",
         isDiscarded: false,
-        hint: "Theory on reuse licenses. Help to find the solution of the 96 card",
-        solution: "Theory on reuse licenses. Help to find the solution of the 96 card"    
+        hint: "Théorie sur les licences deréutilisation. Aide à trouver la solution de la carte 96",
+        solution: "Théorie sur les licences de réutilisation. Aide à trouver la solution de la carte 96"    
     },
     {
         number: "s1",
         isDiscarded: false,
-        hint: "Theory on project documentation. Nothing to find",
-        solution: "Theory on project documentation. Nothing to find"    
+        hint: "Théorie sur la documentation du projet. Rien à trouver",
+        solution: "Théorie sur la documentation du projet. Rien à trouver"    
     },
     {
         number: "s2",
         isDiscarded: false,
-        hint: "Which repository is free and has all its servers in Switzerland? Use card 3 to find its number",
-        solution: "The deposit is FORSBase, number 1. +70 = 71 à take the card 71"    
+        hint: "Quel dépôt est gratuit et possède tous ses serveurs en Suisse ? Aidez-vous de la carte 3 pour trouver son numéro",
+        solution: "Le dépôt est FORSBase, le numéro 1. +70 = 71 → prenez la carte 71"    
     },
     {
         number: "s4",
         isDiscarded: false,
-        hint: "Theory on data types. Nothing to find",
-        solution: "Theory on data types. Nothing to find"    
+        hint: "Théorie sur les types de données. Rien à trouver",
+        solution: "Théorie sur les types de données. Rien à trouver"    
     },
     {
         number: "s5",
         isDiscarded: false,
-        hint: "Theory on data repository. Nothing to find",
-        solution: "Theory on data repository. Nothing to find"    
+        hint: "Théorie sur le dépôt de données. Rien à trouver",
+        solution: "Théorie sur le dépôt de données. Rien à trouver"    
     },
     {
         number: "s8",
         isDiscarded: false,
-        hint: "Theory on altmetrics. Nothing to find",
-        solution: "Theory on altmetrics. Nothing to find"    
+        hint: "Théorie sur les altmetrics. Rien à trouver",
+        solution: "Théorie sur les altmetrics. Rien à trouver"    
     },
     {
         number: "s10",
         isDiscarded: false,
-        hint: "Theory on file naming. Help to find the solution of the card 26",
-        solution: "Theory on file naming. Help to find the solution of the card 26"    
+        hint: "Théorie sur le nommage des fichiers. Aide à trouver la solution de la carte 26",
+        solution: "Théorie sur le nommage des fichiers. Aide à trouver la solution de la carte 26"    
     },
     {
         number: "s13",
         isDiscarded: false,
-        hint: "Data value theory. Take the S25 card",
-        solution: "Data value theory. Take the S25 card"    
+        hint: "Théorie sur la valeur des données. Prenez la carte S25",
+        solution: "Théorie sur la valeur des données. Prenez la carte S25"    
     },
     {
         number: "s15",
         isDiscarded: false,
-        hint: "DMP Theory. Nothing to find",
-        solution: "DMP Theory. Nothing to find"    
+        hint: "Théorie sur le DMP. Rien à trouver",
+        solution: "Théorie sur le DMP. Rien à trouver"    
     },
     {
         number: "s25",
         isDiscarded: false,
-        hint: "Some letters are highlighted",
-        solution: "By reading the letters in red only, we get sixty-one à take card 61"    
+        hint: "Quelques lettres sont mises en évidence",
+        solution: "En lisant les lettres en rouge uniquement, on obtient soixante-et-un → prenez la carte 61"    
     },
     {
         number: "s28",
         isDiscarded: false,
-        hint: "Metadata theory. Nothing to find",
-        solution: "Metadata theory. Nothing to find"    
+        hint: "Théorie sur les métadonnées. Rien à trouver",
+        solution: "Théorie sur les métadonnées. Rien à trouver"    
     }
 ]
 
