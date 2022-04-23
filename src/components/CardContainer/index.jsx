@@ -8,7 +8,6 @@ export default function CardContainer({ numberToBeFound, discardedList, setDisca
             try {
                 const src = require(`../../assets/cards/card${numberToBeFound}.jpg`)
                 setImgSrc([...new Set([ ...imgSrc, src ])])
-                console.log(imgSrc)
             } catch {
                 setImgSrc([...new Set([ ...imgSrc ])])
                 return
