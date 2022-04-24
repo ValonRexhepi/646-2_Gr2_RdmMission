@@ -50,8 +50,6 @@ export default function CheckpointBackward({ initialTime, setIsForward, isPenalt
         } else if (storeTime && updateTime && content.isSolution) {
             stopBtn.click()
             const temp = Math.floor(Math.abs(Number(backwardTime) - (60 * 1000)))
-            console.log("bt", backwardTime)
-            console.log("t", temp)
             backwardTime < 60000 
             ? setHintSolution({ 
                 isOpen: true, 
@@ -106,7 +104,6 @@ export default function CheckpointBackward({ initialTime, setIsForward, isPenalt
                         callback: () => setIsForward(true),
                     }
                 ]}
-                onStart={() => console.log('onStart hook')}
             >
                 {({ getTime, stop }) => (
                     <>

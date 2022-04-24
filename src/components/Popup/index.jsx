@@ -18,7 +18,7 @@ export default function Popup() {
     }
 
     const handleAgree = () => {
-        content.msg?.includes("hint") 
+        content.msg?.includes("l'indice") 
         ? setContent({ ...content, isOpen: false, isHint: true, isSolution: false }) 
         : setContent({ ...content, isOpen: false, isHint: false, isSolution: true }) 
     }
@@ -29,7 +29,7 @@ export default function Popup() {
             onClose={handleClose}
         >
             <DialogTitle>
-                {"Are you sure?"}
+                {"Êtes-vous sûr ?"}
             </DialogTitle>
             <DialogContent>
                 <DialogContentText>{content.msg}</DialogContentText>

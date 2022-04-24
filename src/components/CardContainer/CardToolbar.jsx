@@ -17,14 +17,14 @@ export default function CardToolbar({ source, discardedList, setDiscardedList })
 //    const { setDiscarded } = useDiscarded()
 
     const showHint = () => {
-        setContent({ isOpen: true, msg: "Showing hint costs 30 seconds of your time are you sure to continue?" })
+        setContent({ isOpen: true, msg: "Montrer l'indice coûte 30 secondes de temps. Êtes-vous sûr de vouloir continuer ?" })
         const selected = source?.split("/")[3]?.split(".")[0]
         const card = cards?.find(x => `card${x?.number}` === selected?.toLowerCase())
         setCard(card)
     }
 
     const showSolution = () => {
-        setContent({ isOpen: true, msg: "Showing solution costs 1 minute of your time are you sure to continue?" })
+        setContent({ isOpen: true, msg: "Montrer la solution coûte 1 minute de temps. Êtes-vous sûr de vouloir continuer ?" })
         const selected = source?.split("/")[3]?.split(".")[0]
         const card = cards?.find(x => `card${x?.number}` === selected?.toLowerCase())
         setCard(card)
