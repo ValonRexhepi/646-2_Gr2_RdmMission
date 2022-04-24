@@ -14,7 +14,7 @@ export default function GameScreen({ setIsPenalty }) {
     useEffect(() => {
         const card = cards.find(c => String(c.number) === numberToBeFound.toLowerCase())
         if (card) {
-            card.hint === "Penalty card" || card.solution === "Penalty card"
+            card.hint === "Carte pénalité" || card.solution === "Carte pénalité"
             ? setIsPenalty(true)
             : setIsPenalty(false)
         } else {
