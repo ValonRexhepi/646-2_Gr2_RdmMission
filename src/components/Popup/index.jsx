@@ -18,7 +18,7 @@ export default function Popup() {
     }
 
     const handleAgree = () => {
-        content.msg?.includes("l'indice") 
+        content.msg?.includes("indice") 
         ? setContent({ ...content, isOpen: false, isHint: true, isSolution: false }) 
         : setContent({ ...content, isOpen: false, isHint: false, isSolution: true }) 
     }
