@@ -20,7 +20,7 @@ export default function SearchInput({ setNumberToBeFound, setNotFoundTxt }) {
             <form onSubmit={handleSubmit}>
                 <input
                     className="search-input"
-                    placeholder="Numéro de la carte... (Card number...)"
+                    placeholder="Numéro de la carte..."
                     onChange={handleChange}
                 />
             </form>
