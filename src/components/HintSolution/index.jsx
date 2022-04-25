@@ -32,7 +32,7 @@ export default function HintSolution() {
             </DialogContent>
             <DialogActions>
                 <Button onClick={handleClose}>
-                    Close
+                    Fermer
                 </Button>
             </DialogActions>
         </Dialog>

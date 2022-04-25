@@ -28,7 +28,7 @@ export default function CardList({ numberToBeFound, setNumberToBeFound, notFound
 
     return (
         <div>
-            <h4>Cartes dans la pioche (Cards in Deck)</h4>
+            <h4>Cartes dans la pioche</h4>
             <p>{cardFound && cardFound.number}</p>
             <p>{notFoundTxt}</p>
         </div>

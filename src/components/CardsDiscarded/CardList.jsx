@@ -35,7 +35,7 @@ export default function CardList({ discardedNumberToBeFound, discardedList, setD
 
     return (
         <div>
-            <h4>Cartes défaussées (Cards Discarded)</h4>
+            <h4>Cartes défaussées</h4>
             <div>
                 {discardedList && notFoundTxt === "" &&
                     discardedList.map((card, i) => (

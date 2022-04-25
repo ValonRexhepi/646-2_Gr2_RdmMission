@@ -36,10 +36,10 @@ export default function Popup() {
             </DialogContent>
             <DialogActions>
                 <Button onClick={handleClose}>
-                    <Typography variant="body2" color="error">No</Typography>
+                    <Typography variant="body2" color="error">Non</Typography>
                 </Button>
                 <Button onClick={handleAgree}>
-                    Yes
+                    Oui
                 </Button>
             </DialogActions>
         </Dialog>

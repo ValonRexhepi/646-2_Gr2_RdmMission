@@ -55,7 +55,7 @@ export default function Roadmap({ setIsOpenRoadmap }) {
 
     return (
         <div id="roadmap">
-            <h1>Feuille de route (Roadmap)</h1>
+            <h1>Feuille de route</h1>
             <form>
                 <h3>Etape 1. Elaboration et planification du projet</h3>
                 <label>1.1
@@ -143,7 +143,7 @@ export default function Roadmap({ setIsOpenRoadmap }) {
                 <label>6.2 Préparer la citation du dataset</label>
 
             </form>
-            <button className = "button" onClick={backToGame}>Retour au jeu (Back to game)</button>
+            <button className = "button" onClick={backToGame}>Retour au jeu</button>
         </div>
     )
 }
