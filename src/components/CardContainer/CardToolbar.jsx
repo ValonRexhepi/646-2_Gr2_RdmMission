@@ -50,7 +50,7 @@ export default function CardToolbar({ source, discardedList, setDiscardedList })
 
     return (
         <section className="card-toolbar">
-            <Tooltip title="Hint">
+            <Tooltip title="Indice">
                 <button onClick={showHint}>
                     <GiMagnifyingGlass />
                 </button>
@@ -60,7 +60,7 @@ export default function CardToolbar({ source, discardedList, setDiscardedList })
                     <HiOutlineLightBulb />
                 </button>
             </Tooltip>
-            <Tooltip title="Close">
+            <Tooltip title="Fermer">
                 <button onClick={discardCard}>
                     <HiOutlineX />
                 </button>
