@@ -40,8 +40,6 @@ export default function Backward({ setIsForward, isPenalty }) {
         if (storeTime && updateTime && content.isHint) {
             stopBtn.click()
             const temp = Math.floor(Math.abs(Number(backwardTime) - (30 * 1000)))
-            console.log("bt", backwardTime)
-            console.log("t", temp)
             backwardTime < 30000
             ? setHintSolution({ 
                 isOpen: true, 
@@ -63,7 +61,8 @@ export default function Backward({ setIsForward, isPenalty }) {
             backwardTime < 60000 
             ? setHintSolution({ 
                 isOpen: true, 
-                isHint: true, 
+                isHint: true,
+                isSolution: false, 
                 text: card.solution,
                 key: "backward-time",
                 time: "50"
@@ -71,6 +70,7 @@ export default function Backward({ setIsForward, isPenalty }) {
             : setHintSolution({ 
                 isOpen: true, 
                 isHint: false, 
+                isSolution: true,
                 text: card.solution,
                 key: "backward-time",
                 time: String(temp)
