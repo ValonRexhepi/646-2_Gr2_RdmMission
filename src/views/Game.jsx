@@ -48,7 +48,6 @@ export default function Game() {
                 isPenalty={isPenalty}
             />
 
-            <p>Session Id: {session?.id}</p>
             {/* <Link className = "button" 
                 to={{
                 pathname:"/roadmap",
@@ -58,10 +57,11 @@ export default function Game() {
                 className = "button" 
                 onClick={showRoadmap}
             >
-                Feuille de route (Roadmap)
+                Feuille de route
             </button>
+            <Link to = "/rules" className="button">Règles</Link>
             <Link to="/">
-                <button className="button" onClick={endGame}>Fin du jeu (End Game)</button>
+                <button className="button" onClick={endGame}>Fin du jeu</button>
             </Link>
 
             { isOpenRoadmap && <Roadmap setIsOpenRoadmap={setIsOpenRoadmap} /> }

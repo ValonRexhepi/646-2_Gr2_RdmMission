@@ -21,20 +21,20 @@ export default function HintSolution() {
 
     return (
         <Dialog
-                open={hintSolution.isOpen}
-                onClose={handleClose}
-            >
-                <DialogTitle>
-                    {hintSolution.isHint ? "Hint" : "Solution"}
-                </DialogTitle>
-                <DialogContent>
-                    <DialogContentText>{hintSolution.text}</DialogContentText>
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleClose}>
-                        Close
-                    </Button>
-                </DialogActions>
-            </Dialog>
+            open={hintSolution.isOpen}
+            onClose={handleClose}
+        >
+            <DialogTitle>
+                {hintSolution.isHint ? "Indice" : "Solution"}
+            </DialogTitle>
+            <DialogContent>
+                <DialogContentText>{hintSolution.text}</DialogContentText>
+            </DialogContent>
+            <DialogActions>
+                <Button onClick={handleClose}>
+                    Fermer
+                </Button>
+            </DialogActions>
+        </Dialog>
     )
 }

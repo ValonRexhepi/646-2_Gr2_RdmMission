@@ -18,7 +18,7 @@ export default function SearchInput({ setDiscardedNumberToBeFound, discardedList
             <form onSubmit={handleSubmit}>
                 <input
                     className="search-input"
-                    placeholder="Numéro de la carte... (Card number...)"
+                    placeholder="Numéro de la carte..."
                     onChange={(e) => setCurrenNum((e.target.value).replace(/\s/g, "").toUpperCase())}
                 />
             </form>

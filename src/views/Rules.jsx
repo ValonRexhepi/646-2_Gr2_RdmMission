@@ -8,7 +8,7 @@ export default function Rules() {
 
     return(
         <div className="container" id="rule-screen">
-            <Link to ="/" className="button">Accueil (Go Home)</Link>
+            <Link to ="/" className="button">Retour</Link>
             <div className="pdfdiv">
                 <Document file={Mission_GDR_2022_Regles}>
                     <Page pageNumber={1} className="rule-page" />
