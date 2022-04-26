@@ -16,6 +16,10 @@ export default function CardsDiscarded({ discardedNumberToBeFound, setDiscardedN
         setImgSrc([...new Set([ ...imgSrc, src])])
     }
 
+<<<<<<< HEAD
+=======
+export default function CardsDiscarded({ discardedNumberToBeFound, setDiscardedNumberToBeFound, discardedList, setDiscardedList }) {
+>>>>>>> c3537f3 (Seems working for now)
     return (
         <div>
             <SearchInput 
@@ -27,9 +31,12 @@ export default function CardsDiscarded({ discardedNumberToBeFound, setDiscardedN
                 discardedNumberToBeFound={discardedNumberToBeFound}
                 discardedList={discardedList}
                 setDiscardedList={setDiscardedList}
+<<<<<<< HEAD
                 imgSrc={imgSrc}
                 setImgSrc={setImgSrc}
                 retrieveCard={retrieveCard}
+=======
+>>>>>>> c3537f3 (Seems working for now)
             />
         </div>
     )
