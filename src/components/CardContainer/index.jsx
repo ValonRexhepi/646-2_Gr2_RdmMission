@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import Card from "./Card"
 
-export default function CardContainer({ numberToBeFound, discardedList, setDiscardedList, imgSrc, setImgSrc }) {
+export default function CardContainer({ numberToBeFound, discardedList, setDiscardedList, imgSrc, setImgSrc, minimizedImgSrc, setMinimizedImgSrc }) {
 
     useEffect(() => {
         if (numberToBeFound && discardedList.find(x => x.number.toString() === numberToBeFound.toLowerCase())===undefined) {
@@ -20,7 +20,7 @@ export default function CardContainer({ numberToBeFound, discardedList, setDisca
         <>
             {
                 imgSrc 
-                ? imgSrc.map((source, i) => <Card key={i} source={source} discardedList={discardedList} setDiscardedList={setDiscardedList} />)
+                ? imgSrc.map((source, i) => <Card key={i} source={source} discardedList={discardedList} setDiscardedList={setDiscardedList} minimizedImgSrc={minimizedImgSrc} setMinimizedImgSrc={setMinimizedImgSrc}/>)
                 : null
             }
         </>
