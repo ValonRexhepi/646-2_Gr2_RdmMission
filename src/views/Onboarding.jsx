@@ -41,10 +41,10 @@ export default function Onboarding() {
             </div>
             
             <div>
-                <Link to = "/rules" className="button">Comment jouer ? (Rules)</Link>
+                <Link to = "/rules" className="button">Comment jouer ?</Link>
                 <br/>
                 <button className="button" onClick={createGameSession}>
-                    Commencer une partie (Start Game)
+                    Commencer une partie
                 </button>
             </div>
         </div>
