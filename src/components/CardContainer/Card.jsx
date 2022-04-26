@@ -3,7 +3,7 @@ import Draggable from "react-draggable"
 
 import CardToolbar from "./CardToolbar"
 
-export default function Card({ source, discardedList, setDiscardedList, minimizedImgSrc, setMinimizedImgSrc }) {
+export default function Card({ source, discardedList, setDiscardedList }) {
     const [ position, setPosition ] = useState({ x: 0, y: 0 })
 
     const cardRef = useRef(null)
@@ -29,7 +29,7 @@ export default function Card({ source, discardedList, setDiscardedList, minimize
                 className="card"
                 style={!source.includes("synopsis") && cardPosition.current}
             >
-                {!source.includes("synopsis") && <CardToolbar source={source} discardedList={discardedList} setDiscardedList={setDiscardedList} minimizedImgSrc={minimizedImgSrc} setMinimizedImgSrc={setMinimizedImgSrc} />}
+                {!source.includes("synopsis") && <CardToolbar source={source} discardedList={discardedList} setDiscardedList={setDiscardedList} />}
                 
                 <img 
                     src={source} 

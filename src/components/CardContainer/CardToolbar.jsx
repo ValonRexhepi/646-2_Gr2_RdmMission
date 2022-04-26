@@ -9,11 +9,13 @@ import { useCard } from "../../contexts/CardContext"
 import { useImgSrc } from "../../contexts/ImgSrcContext"
 import cards from "../../constants/cards"
 import { storeDataLS } from "../../utils/helpers"
+//import { useDiscarded } from "../../contexts/DiscardedContext"
 
-export default function CardToolbar({ source, discardedList, setDiscardedList, minimizedImgSrc, setMinimizedImgSrc }) {
+export default function CardToolbar({ source, discardedList, setDiscardedList }) {
     const { setContent } = usePopup()
     const { setCard } = useCard()
-    const { imgSrc, setImgSrc } = useImgSrc()
+    const { imgSrc, setImgSrc } = useImgSrc()    
+//    const { setDiscarded } = useDiscarded()
 
     const showHint = () => {
         setContent({ isOpen: true, msg: "Showing hint costs 30 seconds of your time are you sure to continue?" })
@@ -39,18 +41,17 @@ export default function CardToolbar({ source, discardedList, setDiscardedList, m
                 cards[cardIndex].isDiscarded = true
             }
             setImgSrc(imgSrc.filter(x => x !== source))
-        }                          
-    }
+        }                   
+        // console.log(cards[cardIndex].isDiscarded)
+        // console.log("cards" + cards[cardIndex].isDiscarded)
 
-    const minimizeCard = () => {
-        setMinimizedImgSrc([...minimizedImgSrc, source])
-        setImgSrc(imgSrc.filter(x => x !== source))
+        // document.getElementById(source?.split("/")[3]?.split(".")[0]).style.visibility='hidden'
+        
     }
-
 
     return (
         <section className="card-toolbar">
-            <Tooltip title="Indice">
+            <Tooltip title="Hint">
                 <button onClick={showHint}>
                     <GiMagnifyingGlass />
                 </button>
@@ -60,12 +61,12 @@ export default function CardToolbar({ source, discardedList, setDiscardedList, m
                     <HiOutlineLightBulb />
                 </button>
             </Tooltip>
-            <Tooltip title="Réduire">
-                <button onClick={minimizeCard}>
+            <Tooltip title="Minimize">
+                <button onClick={() => {console.log("minimize")}}>
                     <FiMinimize />
                 </button>
             </Tooltip>
-            <Tooltip title="Fermer">
+            <Tooltip title="Close">
                 <button onClick={discardCard}>
                     <HiOutlineX />
                 </button>
