@@ -4,6 +4,24 @@ import { getDataLS } from "../../utils/helpers"
 export default function CardList({ discardedNumberToBeFound, discardedList, setDiscardedList, imgSrc, setImgSrc, retrieveCard }) {
     const [ cardFound,  ] = useState(null)
     const [ notFoundTxt, setNotFoundTxt ] = useState(null)
+<<<<<<< HEAD
+=======
+    const [ discardedList, setDiscardedList] = useState([])
+    
+    useEffect(() => {        
+
+        for(var i= 0; i<cards.length;i++){
+            if(cards[i].isDiscarded === true && discardedList.includes(cards[i].number)===false){
+                discardedList.push(cards[i].number)
+                console.log(discardedList)
+            }
+        }
+        // cards.map(card => {
+        //     })    
+
+        if (cards) {
+            const found = cards.find(x => String(x.number) === discardedNumberToBeFound.replace(/\s/g, "").toLowerCase())
+>>>>>>> 64beb0a (partially working discard card)
 
     useEffect(() => {
         window.onload = function() {
@@ -37,6 +55,7 @@ export default function CardList({ discardedNumberToBeFound, discardedList, setD
         <div>
             <h4>Cartes défaussées (Cards Discarded)</h4>
             <div>
+<<<<<<< HEAD
                 {discardedList && notFoundTxt === "" &&
                     discardedList.map((card, i) => (
                         <div key={i}>
@@ -46,8 +65,21 @@ export default function CardList({ discardedNumberToBeFound, discardedList, setD
                             <br/>
                         </div>
                     ))
+=======
+                {(cardFound === null) && discardedList &&
+                    discardedList.map((number, i) => {
+                        return(
+                            <div>
+                                <button onClick={() => console.log("bring back card "+number)} key={i}>
+                                    {number}
+                                </button>
+                                <br/>
+                            </div>)
+                    })
+>>>>>>> 64beb0a (partially working discard card)
                 }
                     <p>{cardFound && cardFound.number}</p>
+                    {/* {console.log(discardedList)} */}
                     <p>{notFoundTxt}</p>       
             </div>
         </div>
