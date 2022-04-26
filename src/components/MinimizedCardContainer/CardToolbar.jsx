@@ -2,18 +2,16 @@ import React from "react"
 import { HiOutlineLightBulb } from "react-icons/hi"
 import { GiMagnifyingGlass } from "react-icons/gi"
 import { HiOutlineX } from 'react-icons/hi'
-import { FiMinimize } from 'react-icons/fi'
+import { FiMaximize } from 'react-icons/fi'
 import { Tooltip } from "@mui/material"
 import { usePopup } from "../../contexts/PopupContext"
 import { useCard } from "../../contexts/CardContext"
-import { useImgSrc } from "../../contexts/ImgSrcContext"
 import cards from "../../constants/cards"
 import { storeDataLS } from "../../utils/helpers"
 
-export default function CardToolbar({ source, discardedList, setDiscardedList, minimizedImgSrc, setMinimizedImgSrc }) {
+export default function CardToolbar({ source, discardedList, setDiscardedList, minimizedImgSrc, setMinimizedImgSrc, imgSrc, setImgSrc }) {
     const { setContent } = usePopup()
     const { setCard } = useCard()
-    const { imgSrc, setImgSrc } = useImgSrc()
 
     const showHint = () => {
         setContent({ isOpen: true, msg: "Showing hint costs 30 seconds of your time are you sure to continue?" })
@@ -38,18 +36,18 @@ export default function CardToolbar({ source, discardedList, setDiscardedList, m
             if (cards && cardIndex !== -1) {
                 cards[cardIndex].isDiscarded = true
             }
-            setImgSrc(imgSrc.filter(x => x !== source))
-        }                          
+            setMinimizedImgSrc(minimizedImgSrc.filter(x => x !== source))
+        }                           
     }
 
-    const minimizeCard = () => {
-        setMinimizedImgSrc([...minimizedImgSrc, source])
+    const maximizeCard = () => {
+        setMinimizedImgSrc(minimizedImgSrc.filter(x => x !== source))
         setImgSrc(imgSrc.filter(x => x !== source))
+        setImgSrc([...imgSrc, source])
     }
-
 
     return (
-        <section className="card-toolbar">
+        <section className="minimizedCard-toolbar">
             <Tooltip title="Indice">
                 <button onClick={showHint}>
                     <GiMagnifyingGlass />
@@ -60,9 +58,9 @@ export default function CardToolbar({ source, discardedList, setDiscardedList, m
                     <HiOutlineLightBulb />
                 </button>
             </Tooltip>
-            <Tooltip title="Réduire">
-                <button onClick={minimizeCard}>
-                    <FiMinimize />
+            <Tooltip title="Agrandir">
+                <button onClick={maximizeCard}>
+                    <FiMaximize />
                 </button>
             </Tooltip>
             <Tooltip title="Fermer">
