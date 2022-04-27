@@ -1,6 +1,6 @@
 import React from "react";
 import { Page, Document , pdfjs } from "react-pdf";
-import Mission_GDR_2022_Regles from "../docs/Mission_GDR_2022_Regles.pdf";
+import Mission_GDR_2022_Regles from "../docs/Mission_GDR_2022_Regles_Online.pdf";
 import { Link } from "react-router-dom";
 
 export default function Rules() {
