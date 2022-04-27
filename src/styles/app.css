@@ -115,6 +115,8 @@ h4 {
   min-height: 70vh;
   display: grid;
   grid: 1fr / 0.3fr 1fr 0.3fr;
+  flex: 1;
+  overflow-y: scroll;
 }
 
 .cards {
@@ -122,6 +124,16 @@ h4 {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+}
+
+.minimizedCards {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+  height: 50%;
+  z-index: 999;
 }
 
 .card {
@@ -171,6 +183,23 @@ h4 {
 
 .card-toolbar svg {
   font-size: 1.6rem;
+}
+
+.minimizedCard {
+  position: absolute;
+  background: var(--orange);
+  padding: 5px;
+  cursor: move;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.minimizedCard-toolbar {
+  padding: 0 0 0.4rem 0;
+  width: 25%;
+  /* background: yellow; */
+  /* cursor: default; */
 }
 
 .timer {

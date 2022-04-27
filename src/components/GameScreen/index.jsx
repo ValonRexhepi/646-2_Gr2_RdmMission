@@ -4,12 +4,14 @@ import CardsInDeck from "../CardsInDeck"
 import CardContainer from "../CardContainer"
 import CardsDiscarded from "../CardsDiscarded"
 import cards from "../../constants/cards"
+import MinimizedCardContainer from "../MinimizedCardContainer"
 
 export default function GameScreen({ setIsPenalty }) {
     const [ numberToBeFound, setNumberToBeFound ] = useState("synopsis")
     const [ discardedNumberToBeFound, setDiscardedNumberToBeFound] = useState("")
     const [ discardedList, setDiscardedList] = useState([])
     const { imgSrc, setImgSrc } = useImgSrc()
+    const [ minimizedImgSrc, setMinimizedImgSrc ] = useState([])
 
     useEffect(() => {
         const card = cards.find(c => String(c.number) === numberToBeFound.toLowerCase())
@@ -23,7 +25,19 @@ export default function GameScreen({ setIsPenalty }) {
     }, [numberToBeFound, setIsPenalty])
 
     return (
-        <div id="game-screen">
+        <div>
+            <div className="minimizedCards">
+                <MinimizedCardContainer
+                    minimizedImgSrc={minimizedImgSrc}
+                    setMinimizedImgSrc={setMinimizedImgSrc}
+                    discardedList={discardedList}
+                    setDiscardedList={setDiscardedList}
+                    imgSrc={imgSrc}
+                    setImgSrc={setImgSrc}
+                />
+            </div>
+
+            <div id="game-screen">
             <CardsInDeck
                 numberToBeFound={numberToBeFound}
                 setNumberToBeFound={setNumberToBeFound}
@@ -37,6 +51,8 @@ export default function GameScreen({ setIsPenalty }) {
                     setDiscardedList={setDiscardedList}
                     imgSrc={imgSrc}
                     setImgSrc={setImgSrc}
+                    minimizedImgSrc={minimizedImgSrc}
+                    setMinimizedImgSrc={setMinimizedImgSrc}
                 />
             </div>
 
@@ -48,6 +64,7 @@ export default function GameScreen({ setIsPenalty }) {
                 imgSrc={imgSrc}
                 setImgSrc={setImgSrc}
             />
+            </div>
         </div>
     )
 }
